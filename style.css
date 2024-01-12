@@ -1,0 +1,75 @@
+/*Scrollbar*/
+body::-webkit-scrollbar {
+    width: 14px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #9808f218;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #f0f0f0;
+}
+
+/*Navbar*/
+header{
+    z-index: 3;
+}
+
+.nombre{
+    padding-left: 50px;
+}
+.space-x-6{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 50px;
+}
+
+/*Main*/
+main{
+    margin-top: 9vh;
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+    margin-bottom: 1vh;
+}
+.presentacion{
+    margin-top: 8vh;
+}
+.text-left{
+    margin-left: 12vh;
+}
+.logotipo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Brush1{
+    position: absolute;
+    transform: rotate(185deg);
+    z-index: 1;
+    top: -160px;
+    left: -50px
+}
+.Brush2{
+    position: absolute;
+    transform: rotate(185deg);
+    z-index: 1;
+    top: 380px;
+    left: 280px
+}
+
+/*Aside*/
+.AboutmeContainer1{
+    position: sticky;
+    margin-left: 10vh;
+    margin-right: 10vh;
+    margin-bottom: 5vh;
+    z-index: 2;
+}
+
+.AboutmeContainer2{
+    margin-left: 10vh;
+    margin-right: 10vh;
+}
+
+/*Footer*/

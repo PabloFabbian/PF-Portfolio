@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pablo Fabbian - Frontend Developer & Designer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/5ed52fce3f.js" crossorigin="anonymous"></script>
+    <script defer src="main.js"></script>
+    <link rel="icon" href="media/PF Logo.ico" />
+</head>
+<body>
+    <header class="fixed top-0 border-b-2 border-violet-600 bg-violet-50 py-4 px-6 flex items-center justify-between w-full">
+        <h1 class="text-2xl font-bold nombre">Pablo Ezequiel Fabbian</h1>
+        <nav class="flex items-center">
+            <ul class="flex space-x-6">
+                <li><a href="#" class="hover:text-purple-800">Home</a></li>
+                <li><a href="#" class="hover:text-purple-800">About me</a></li>
+                <li><a href="#" class="hover:text-purple-800">Projects</a></li>
+                <li><a href="#" class="hover:text-purple-800">Skills</a></li>
+                <li><a href="#" class="hover:text-purple-800">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="bg-white py-8">
+        <div class="max-w-7xl mx-auto flex flex-row items-center justify-between">
+            <img src="media/Brush1.png" class="Brush1">
+            <img src="media/Brush2.png" class="Brush2">
+            <div class="text-left presentacion">
+                <h1 class="text-3xl font-bold mb-4">Hi there! I'm <span class="text-violet-600 hover:text-violet-800">Pablo Fabbian</span> 👋</h1>
+                <h2 class="text-2xl font-normal h2dev">Frontend Dev & Design Enthusiast,</h2>
+                <h2 class="text-2xl font-normal h2dev">based in <b>Buenos Aires, Argentina</b></h2>
+                <div class="mt-4 flex justify-left">
+                    <a href="https://linkedin.com/in/your-linkedin" target="_blank" class="w-12 h-12 rounded-full border border-brown-400 hover:bg-brown-400 hover:text-blue-800 flex items-center justify-center">
+                        <i class="fa-brands fa-linkedin text-2xl text-brown-400"></i>
+                    </a>
+                    <a href="https://github.com/your-github" target="_blank" class="w-12 h-12 rounded-full border border-brown-400 hover:bg-brown-400 hover:text-indigo-700 flex items-center justify-center ml-4">
+                        <i class="fa-brands fa-github text-2xl text-brown-400"></i>
+                    </a>
+                    <a href="https://twitter.com/your-twitter" target="_blank" class="w-12 h-12 rounded-full border border-brown-400 hover:bg-brown-400 hover:text-blue-400 flex items-center justify-center ml-4">
+                        <i class="fa-brands fa-twitter text-2xl text-brown-400"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="w-full lg:w-6/12 logotipo">
+                <img class="rounded-full h-90 w-auto   object-cover" src="media/Dev3.jpg" alt="Profile Picture">
+            </div>
+        </div>
+    </main>
+
+    <aside class="bg-gray-100 py-8 px-6 AboutmeContainer1">
+        <h3 class="text-center text-lg font-bold mb-4">About Me</h3>
+        <p class="text-center text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus alias repudiandae molestias, vitae dolore quae. Sit reprehenderit deserunt, dolorum ad perferendis nisi, qui provident veniam repudiandae, id doloribus minus est.</p>
+    </aside>
+        
+    <div class="flex items-center AboutmeContainer2">
+        <article id="techStack" class="container mx-auto p-4 w-3/4 flex mr-8 justify-around">
+            <h4 class="text-2xl font-bold mb-4">Tech Stack</h4>
+            <!-- Contenido de Tech Stack se generará con JavaScript -->
+        </article>
+        
+        <aside id="studies" class="bg-gray-100 p-4 w-1/4 AboutmeContainer3">
+            <h4 class="text-2xl font-bold mb-4">Studies</h4>
+            <ul class="space-y-4">
+                <li>
+                    <p class="text-lg">React Frontend Development Career</p>
+                    <h5 class="text-gray-500 text-sm mb-2">2022 - 2023 | Coderhouse eLearning</h5>
+                </li>
+                <li>
+                    <p class="text-lg">Computer Science</p>
+                    <h5 class="text-gray-500 text-sm mb-2">2023 - At the moment | University of Buenos Aires</h5>
+                </li>
+            </ul>
+        </aside>
+    </div>
+    
+    <section class="container mx-auto p-4 mt-8">
+        <h2 class="text-4xl font-bold mb-4 text-center">My projects</h2>
+        <h3 class="text-2xl font-medium mb-8 text-center">Dream it, do it, show them!</h3>
+    
+        <div id="proyectosContainer" class="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-8 px-6 text-center">
+        <p>Copyright &copy; 2023 Pablo Fabbian</p>
+    </footer>
+</body>
+</html>
