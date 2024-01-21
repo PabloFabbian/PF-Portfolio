@@ -2,22 +2,34 @@
 body::-webkit-scrollbar {
     width: 14px;
 }
-
 body::-webkit-scrollbar-thumb {
     background-color: #9808f218;
 }
-
 body::-webkit-scrollbar-track {
     background-color: #f0f0f0;
+}
+html{
+    zoom: 90%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 /*Navbar*/
 header{
     z-index: 3;
+    background: linear-gradient(to bottom, #e4dff7, #f7f0f0);
 }
-
-.nombre{
-    padding-left: 50px;
+.logo-container{
+    display: flex;
+    align-items: center;
+}
+.devLogo{
+    margin-left: 9vh;
+}
+.logo-text{
+    font-size: 1.75rem;
+    margin-left: 1rem;
 }
 .space-x-6{
     padding-top: 20px;
@@ -31,9 +43,13 @@ main{
     padding-top: 20vh;
     padding-bottom: 20vh;
     margin-bottom: 1vh;
+    scroll-margin-top: 58px;
 }
 .presentacion{
     margin-top: 8vh;
+}
+.name{
+    z-index: 2;
 }
 .text-left{
     margin-left: 12vh;
@@ -47,29 +63,207 @@ main{
     position: absolute;
     transform: rotate(185deg);
     z-index: 1;
-    top: -160px;
+    top: -10px;
     left: -50px
 }
 .Brush2{
     position: absolute;
-    transform: rotate(185deg);
+    transform: rotate(195deg);
     z-index: 1;
-    top: 380px;
-    left: 280px
+    top: 570px;
+    left: 420px
+}
+@keyframes bounce {
+    0%, 100% {
+    transform: translateY(-5px);
+    }
+    60% {
+    transform: translateY(15px);
+    }
+}
+.floating-image {
+    animation: bounce 5s infinite;
 }
 
 /*Aside*/
+aside{
+    scroll-margin-top: 160px;
+}
 .AboutmeContainer1{
     position: sticky;
     margin-left: 10vh;
     margin-right: 10vh;
-    margin-bottom: 5vh;
+    margin-bottom: 6vh;
     z-index: 2;
+    background: linear-gradient(to bottom, #e4dff7, #f7f0f0);
 }
-
 .AboutmeContainer2{
     margin-left: 10vh;
     margin-right: 10vh;
+    background: linear-gradient(to bottom, #e4dff7, #f7f0f0);
+}
+#profile-photo{
+    margin-left: 2.5vh;
+    margin-top: 0.5vh;
+}
+#profile-photo:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
 }
 
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    transition: transform 0.5s ease-in-out;
+    justify-content: left;
+}
+
+.carousel-item {
+    flex: 0 0 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel img {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    height: 90vh;
+    max-height: 105vh;
+    width: auto;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 27%;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.20);
+    padding: 22vh 6vh 25vh 6vh;
+    border: none;
+    outline: none;
+    opacity: 0.5;
+    transition: opacity 0.4s ease;
+    margin-left: 3vh;
+    margin-right: 3vh;}
+
+.carousel-btn:hover {
+    opacity: 1;
+}
+
+.carousel-btn.left {
+    left: 20px;
+}
+
+.carousel-btn.right {
+    right: 20px;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+/*Section*/
+section{
+    scroll-margin-top: 97px;
+}
+.contenedorProyecto {
+    position: relative;
+    overflow:visible;
+}
+.contenedorProyecto:hover .nombreProyecto {
+    transform: scale(1.1);
+    text-shadow: 0 0 1px rgba(167, 139, 250, 0.8);
+    cursor: pointer;
+    color: #6c0fb8;
+}
+.contenedorProyecto:hover img {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+}
+
+/*Contact form*/
+#contact{
+    scroll-margin-top: 90px;
+}
+.contactMeForm{
+    font-family: 'Arial', sans-serif;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 8px;
+    padding: 30px;
+    margin-top: 50px;
+}
+
+.form-label {
+    color: #9077d9;
+    padding-bottom: 1vh;
+}
+
+.form-input {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    transition: border-color 0.3s;
+}
+
+.form-input:focus {
+    outline: 2.5px solid;
+    outline-color: #6d4acf;
+}
+
+.form-button {
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.4s;
+}
+
+.form-button:hover {
+    background-color: #6d4acf;
+    border-color: #150a35;
+}
+
+.invitationText{
+    text-wrap: pretty;
+    margin-right: 3rem;
+}
 /*Footer*/
+footer{
+    padding-top: 55vh;
+    padding-bottom: 55vh;
+    background-color: #2C2C2C;
+}
+.fa-twitter{
+    padding-left: 1.5px;
+}
+.fa-instagram{
+    font-size:180%;
+    padding-bottom: 0.5px;
+}
+.fa-whatsapp{
+    font-size: 165%;
+    padding-bottom: 1.5px;
+    padding-left: 1px;
+}

@@ -8,62 +8,80 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/5ed52fce3f.js" crossorigin="anonymous"></script>
     <script defer src="main.js"></script>
-    <link rel="icon" href="media/PF Logo.ico" />
+    <link rel="icon" href="media/CodingIcon.png" />
 </head>
 <body>
-    <header class="fixed top-0 border-b-2 border-violet-600 bg-violet-50 py-4 px-6 flex items-center justify-between w-full">
-        <h1 class="text-2xl font-bold nombre">Pablo Ezequiel Fabbian</h1>
+    <header class="fixed top-0 border-b-2 border-violet-800 bg-violet-50 py-3 px-6 flex items-center justify-between w-full navbar">
+        <div class="logo-container">
+            <img src="media/CodingIcon.png" class="devLogo w-16 h-16 mt-1">
+            <p class="logo-text text-2xl font-bold">PF Web Portfolio</p>
+        </div>
         <nav class="flex items-center">
-            <ul class="flex space-x-6">
-                <li><a href="#" class="hover:text-purple-800">Home</a></li>
-                <li><a href="#" class="hover:text-purple-800">About me</a></li>
-                <li><a href="#" class="hover:text-purple-800">Projects</a></li>
+            <ul class="flex space-x-9 mr-10">
+                <li><a href="#home" class="hover:text-purple-800">Home</a></li>
+                <li><a href="#about" class="hover:text-purple-800">About</a></li>
+                <li><a href="#projects" class="hover:text-purple-800">Projects</a></li>
                 <li><a href="#" class="hover:text-purple-800">Skills</a></li>
-                <li><a href="#" class="hover:text-purple-800">Contact</a></li>
+                <li><a href="#contact" class="hover:text-purple-800">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="bg-white py-8">
+    <main id="home" class="bg-white py-8">
         <div class="max-w-7xl mx-auto flex flex-row items-center justify-between">
             <img src="media/Brush1.png" class="Brush1">
             <img src="media/Brush2.png" class="Brush2">
             <div class="text-left presentacion">
-                <h1 class="text-3xl font-bold mb-4">Hi there! I'm <span class="text-violet-600 hover:text-violet-800">Pablo Fabbian</span> 👋</h1>
-                <h2 class="text-2xl font-normal h2dev">Frontend Dev & Design Enthusiast,</h2>
-                <h2 class="text-2xl font-normal h2dev">based in <b>Buenos Aires, Argentina</b></h2>
+                <h1 class="text-4xl font-bold mb-4">Hi there! I'm <span class="text-violet-600 hover:text-violet-800 name">Pablo Fabbian</span> 👋</h1>
+                <h2 class="text-2xl font-normal ml-0.5"><b class="text-violet-600">Frontend Dev</b> & <b class="text-violet-600">Design Enthusiast</b>,</h2>
+                <h2 class="text-2xl font-normal ml-0.5 mb-6">based in <b>Buenos Aires, Argentina</b></h2>
                 <div class="mt-4 flex justify-left">
-                    <a href="https://linkedin.com/in/your-linkedin" target="_blank" class="w-12 h-12 rounded-full border border-brown-400 hover:bg-brown-400 hover:text-blue-800 flex items-center justify-center">
-                        <i class="fa-brands fa-linkedin text-2xl text-brown-400"></i>
+                    <a href="https://www.linkedin.com/in/pablofabbian/" target="_blank" class="transition duration-300 transition-transform hover:scale-125 hover:border-blue-500  w-12 h-12 rounded-full border border-brown-400 hover:bg-brown-400 hover:text-blue-800 flex items-center justify-center">
+                        <i class="fa-brands fa-linkedin text-2xl"></i>
                     </a>
-                    <a href="https://github.com/your-github" target="_blank" class="w-12 h-12 rounded-full border border-brown-400 hover:bg-brown-400 hover:text-indigo-700 flex items-center justify-center ml-4">
-                        <i class="fa-brands fa-github text-2xl text-brown-400"></i>
+                    <a href="https://github.com/PabloFabbian" target="_blank" class="transition duration-300 transition-transform hover:scale-125 hover:border-indigo-500  w-12 h-12 rounded-full border border-brown-400 hover:bg-brown-400 hover:text-indigo-700 flex items-center justify-center ml-4">
+                        <i class="fa-brands fa-github text-2xl"></i>
                     </a>
-                    <a href="https://twitter.com/your-twitter" target="_blank" class="w-12 h-12 rounded-full border border-brown-400 hover:bg-brown-400 hover:text-blue-400 flex items-center justify-center ml-4">
-                        <i class="fa-brands fa-twitter text-2xl text-brown-400"></i>
+                    <a href="https://www.threads.net/@pablo.fabbian" target="_blank" class="transition duration-300 transition-transform hover:scale-125 hover:border-blue-500  w-12 h-12 rounded-full border border-brown-400 hover:bg-brown-400 hover:text-blue-400 flex items-center justify-center ml-4">
+                        <i class="fa-brands fa-threads text-2xl"></i>
                     </a>
                 </div>
             </div>
-            <div class="w-full lg:w-6/12 logotipo">
-                <img class="rounded-full h-90 w-auto   object-cover" src="media/Dev3.jpg" alt="Profile Picture">
+            <div class="w-full lg:w-6/12 mb-7 logotipo">
+                <img class="rounded-full h-90 w-auto object-cover floating-image" src="media/Dev3.jpg" alt="Profile Picture">
             </div>
         </div>
     </main>
 
-    <aside class="bg-gray-100 py-8 px-6 AboutmeContainer1">
-        <h3 class="text-center text-lg font-bold mb-4">About Me</h3>
-        <p class="text-center text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus alias repudiandae molestias, vitae dolore quae. Sit reprehenderit deserunt, dolorum ad perferendis nisi, qui provident veniam repudiandae, id doloribus minus est.</p>
+    <aside id="about" class="flex bg-gray-100 py-7 px-6 rounded-full AboutmeContainer1">
+        <div class="flex-shrink-0">
+            <img id="profile-photo" src="media/ProfilePhoto.jpeg" class="rounded-full h-36 w-36 cursor-pointer floating-image mb-4 mt-1" alt="Profile Photo" onclick="showCarousel()">
+        </div>
+        <div class="ml-8 mt-4">
+            <h3 class="text-3xl font-bold mb-3">About me</h3>
+            <p class="text-lg">Proactive, empathetic, and creative individual with a dedicated commitment to service. I am currently seeking a dynamic position that not only fosters my professional growth but also allows me to pursue ongoing studies, contributing to both my personal and career development endeavors.</p>
+        </div>
     </aside>
-        
-    <div class="flex items-center AboutmeContainer2">
-        <article id="techStack" class="container mx-auto p-4 w-3/4 flex mr-8 justify-around">
-            <h4 class="text-2xl font-bold mb-4">Tech Stack</h4>
-            <!-- Contenido de Tech Stack se generará con JavaScript -->
+    
+    <div class="overlay" id="overlay" onclick="hideCarousel()">
+        <div class="carousel" id="carousel-container">
+            <div class="carousel-item"><img src="media/Profile1.gif" alt="Photo 1"></div>
+            <div class="carousel-item"><img src="media/Profile4.jpeg" alt="Photo 4"></div>
+            <div class="carousel-item"><img src="media/Profile2.jpeg" alt="Photo 2"></div>
+        </div>
+        <div class="carousel-btn left" onclick="changeSlide(event, -1)">&lt;</div>
+        <div class="carousel-btn right" onclick="changeSlide(event, 1)">&gt;</div>
+    </div>
+    
+    <div class="flex items-center rounded-lg AboutmeContainer2">
+        <article id="techStack" class="container mx-auto p-4 w-3/4 flex justify-around">
+            <h4 class="text-3xl font-bold mb-4">Tech Stack</h4>
+            <!-- Contenido de Tech Stack generado con JavaScript -->
         </article>
-        
-        <aside id="studies" class="bg-gray-100 p-4 w-1/4 AboutmeContainer3">
-            <h4 class="text-2xl font-bold mb-4">Studies</h4>
-            <ul class="space-y-4">
+    
+        <aside id="studies" class="p-4 w-1/4 AboutmeContainer3">
+            <h4 class="text-3xl font-bold mt-2 mr-1 mb-3 ml-4">Studies</h4>
+            <ul class="space-y-4 mb-2 mr-4 ml-4">
                 <li>
                     <p class="text-lg">React Frontend Development Career</p>
                     <h5 class="text-gray-500 text-sm mb-2">2022 - 2023 | Coderhouse eLearning</h5>
@@ -76,15 +94,73 @@
         </aside>
     </div>
     
-    <section class="container mx-auto p-4 mt-8">
-        <h2 class="text-4xl font-bold mb-4 text-center">My projects</h2>
-        <h3 class="text-2xl font-medium mb-8 text-center">Dream it, do it, show them!</h3>
+    <section id="projects" class="container mx-auto p-4 mt-8">
+        <h2 class="text-5xl font-bold mb-4 text-center pt-2">My <span class="text-violet-600">projects</span></h2>
+        <h3 class="text-2xl font-medium mb-10 text-center">Dream it, do it, show them!</h3>
     
         <div id="proyectosContainer" class="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
     </section>
 
-    <footer class="bg-gray-800 text-white py-8 px-6 text-center">
-        <p>Copyright &copy; 2023 Pablo Fabbian</p>
+    <div id="contact" class="flex justify-between items-center h-screen bg-violet-50 mt-8">
+        <div class="w-3/6">
+            <h1 class="text-5xl font-bold text-left mb-8"><span class="text-violet-600">Hey</span> there!</h1>
+            <p class="text-2xl font-medium mb-8 text-left invitationText">Feel free to fill out the next form. It'll land straight into my inbox. Can't wait to chat with you!</p>
+        </div>
+        <div class="container mx-auto w-2/3 contactMeForm">
+            <div class="flex justify-center items-center h-screen bg-stone-900">
+                <div class="contact-form w-4/5">
+                    <h2 class="text-5xl font-bold text-center mb-6 text-violet-400">Contact me</h2>
+                    <form id="contactForm">
+                        <div class="mb-4">
+                            <label for="name" class="block text-sm font-medium form-label">Name</label>
+                            <input type="text" id="name" name="name" class="form-input" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-sm font-medium form-label">E-mail</label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-sm font-medium form-label">Message</label>
+                            <textarea id="message" name="message" rows="4" class="form-input" required></textarea>
+                        </div>
+                        <button type="submit" class="form-button border border-2 mb-10">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="mt-auto text-white p-8">
+        <div class="flex justify-between items-center">
+
+            <p class="text-sm">&copy; 2024 Pablo Fabbian. All rights reserved.</p>
+
+            <!-- Redes sociales y botón de contacto -->
+            <div class="flex items-center space-x-4">
+                <div class="flex justify-left mr-4">
+                    <a href="https://www.linkedin.com/in/pablofabbian/" target="_blank" class="w-10 h-10 rounded-full border hover:border-blue-500 hover:text-blue-500 flex items-center justify-center ml-4 hover:scale-110 transition duration-300">
+                        <i class="fa-brands fa-linkedin text-2xl"></i>
+                    </a>
+                    <a href="https://github.com/PabloFabbian" target="_blank" class="w-10 h-10 rounded-full border hover:border-indigo-500 hover:text-indigo-500 flex items-center justify-center ml-4 hover:scale-110 transition duration-300">
+                        <i class="fa-brands fa-github text-2xl"></i>
+                    </a>
+                    <a href="https://www.instagram.com/pablo.fabbian" target="_blank" class="w-10 h-10 rounded-full border hover:border-violet-400 hover:text-violet-400 flex items-center justify-center ml-4 hover:scale-110 transition duration-300">
+                        <i class="fa-brands fa-instagram text-2xl"></i>
+                    </a>
+                    <a href="https://www.threads.net/@pablo.fabbian" target="_blank" class="w-10 h-10 rounded-full border hover:border-blue-400 hover:text-blue-400 flex items-center justify-center ml-4 hover:scale-110 transition duration-300">
+                        <i class="fa-brands fa-threads text-2xl"></i>
+                    </a>
+                    <a href="https://wa.me/+5491168529993" target="_blank" class="w-10 h-10 rounded-full border hover:border-green-400 hover:text-green-400 flex items-center justify-center ml-4 hover:scale-110 transition duration-300">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i>
+                    </a>
+                </div>
+
+                <button href="#" class="bg-violet-500 text-lg border-2 border-violet-900 text-white px-6 py-2 rounded-full hover:bg-violet-600 transition duration-300 hover:scale-105">
+                    Contact me
+                </button>
+            </div>
+        </div>
     </footer>
+
 </body>
 </html>
