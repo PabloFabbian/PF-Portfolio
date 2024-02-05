@@ -240,38 +240,46 @@ proyectos.forEach(proyecto => {
     proyectosContainer.appendChild(card);
 });
 
-//Formulario ------------------------------------------------------------
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-  event.preventDefault();
+// Formulario ------------------------------------------------------------
+function initializeEmailjs() {
+  emailjs.init("nJenqIBnz8z2GP05O");
 
-  // Obtener los datos del formulario
-  const formData = new FormData(event.target);
-  const formDataObject = {};
-  formData.forEach((value, key) => {
-    formDataObject[key] = value;
-  });
+  document.getElementById('contactForm').addEventListener('submit', async function(event) {
+    event.preventDefault();
 
-  // Configuración de Email.js
-  emailjs.init("user_5rV5HgjTEv6gNjLAO4Mgt");
+    try {
+      // Obtener los datos del formulario
+      const formData = new FormData(event.target);
+      const formDataObject = {};
+      formData.forEach((value, key) => {
+        formDataObject[key] = value;
+      });
 
-  // Parámetros para enviar el correo
-  const params = {
-    ...formDataObject,
-    to_email: "pablo.fabbian@gmail.com",
-  };
+      // Parámetros para enviar el correo
+      const params = {
+        ...formDataObject,
+        email: "pablo.fabbian@gmail.com",
+      };
 
-  // Enviar el correo
-  emailjs.send("Gmail", "template_template_uyqprzm", params)
-    .then(function(response) {
+      // Enviar el correo
+      const response = await emailjs.send("service_01ijrdq", "template_uyqprzm", params);
       console.log('Correo enviado con éxito:', response);
       alert('Formulario enviado con éxito. ¡Gracias por contactarme!');
-    }, function(error) {
+    }
+
+    catch (error) {
       console.error('Error al enviar el correo:', error);
+      
+      if (error.response && error.response.text) {
+        console.error('Detalles específicos del error:', error.response.text);
+      }
+    
       alert('Error al enviar el formulario. Por favor, inténtalo de nuevo.');
-    });
-});
+    }     
+  });
+}
 
-
+//-----
 document.addEventListener("DOMContentLoaded", function() {
     const animatedHeading = document.getElementById('animated-heading');
 
@@ -297,4 +305,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Agregar un listener de scroll
     window.addEventListener('scroll', handleScroll);
+});
+
+
+//Formulario x2
+document.addEventListener('DOMContentLoaded', function() {
+  initializeEmailjs();
 });
