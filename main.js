@@ -174,7 +174,7 @@ createTechStackList();
 //Datos para Proyectos ------------------------------------------------------------
 const proyectos = [
   { nombre: "Redline Project", descripcion: "A refined local e-commerce platform that aims to guarantee the most efficient experience in PC components and assembly for its users.", imgSrc: "media/RedlineProject.jpeg", repoLink: "https://github.com/PabloFabbian/Red_Line_Project" },
-  { nombre: "Kuta Coffee ", descripcion: "An e-commerce in principle, which also allows customers to place orders from the store table, providing a more comfortable and efficient experience.", imgSrc: "media/Kutacoffee.jpeg", repoLink: "https://github.com/PabloFabbian/Kuta_Coffee" },
+  { nombre: "Kuta Coffee ", descripcion: "An e-commerce in principle, which also allows customers to place orders from the store table, providing a more comfortable and efficient experience.", imgSrc: "media/KutaCoffee.jpeg", repoLink: "https://github.com/PabloFabbian/Kuta_Coffee" },
   { nombre: "Game Development", descripcion: "A retro-style pixel platformer on this web platform. Navigate through nostalgic gaming experiences. No frills, just pure exploration and enjoyment.", imgSrc: "media/Game.gif", repoLink: "#" },
   { nombre: "Spotify App Re-Design", descripcion: "The classic Spotify application, innovating with new features to enhance the experience for the clientele, improving their interaction with the app.", imgSrc: "media/SpotifyClone.jpeg", repoLink: "#" }
 ];
@@ -185,7 +185,7 @@ function crearCard(proyecto) {
   card.className = 'card';
 
   const contenedor = document.createElement('div');
-  contenedor.className = 'contenedorProyecto'; // Nuevo contenedor
+  contenedor.className = 'contenedorProyecto';
 
   const imagen = document.createElement('img');
   imagen.src = proyecto.imgSrc;
@@ -231,7 +231,6 @@ function crearCard(proyecto) {
   return card;
 }
 
-
 // Obtener el contenedor de proyectos
 const proyectosContainer = document.getElementById('proyectosContainer');
 
@@ -243,10 +242,35 @@ proyectos.forEach(proyecto => {
 
 //Formulario ------------------------------------------------------------
 document.getElementById('contactForm').addEventListener('submit', function(event) {
-  // Agregar la lógica de envío del formulario aquí.
   event.preventDefault();
-  alert('Formulario enviado con éxito. (¡Agrega tu lógica de envío aquí!)');
+
+  // Obtener los datos del formulario
+  const formData = new FormData(event.target);
+  const formDataObject = {};
+  formData.forEach((value, key) => {
+    formDataObject[key] = value;
+  });
+
+  // Configuración de Email.js
+  emailjs.init("user_5rV5HgjTEv6gNjLAO4Mgt");
+
+  // Parámetros para enviar el correo
+  const params = {
+    ...formDataObject,
+    to_email: "pablo.fabbian@gmail.com",
+  };
+
+  // Enviar el correo
+  emailjs.send("Gmail", "template_template_uyqprzm", params)
+    .then(function(response) {
+      console.log('Correo enviado con éxito:', response);
+      alert('Formulario enviado con éxito. ¡Gracias por contactarme!');
+    }, function(error) {
+      console.error('Error al enviar el correo:', error);
+      alert('Error al enviar el formulario. Por favor, inténtalo de nuevo.');
+    });
 });
+
 
 document.addEventListener("DOMContentLoaded", function() {
     const animatedHeading = document.getElementById('animated-heading');
