@@ -1,3 +1,60 @@
+// Navbar details -----------------------------------------------------
+$(document).ready(function() {
+  $('.menu a').hover(
+      function() {
+          // Al hacer hover, añadir una clase para el efecto
+          $(this).addClass('hovered');
+      },
+      function() {
+          // Al salir del hover, quitar la clase para deshacer el efecto
+          $(this).removeClass('hovered');
+      }
+  );
+});
+
+//------
+document.addEventListener('DOMContentLoaded', function () {
+  const burgerButton = document.querySelector('.burger-button');
+  const menu = document.querySelector('.burger-menu');
+
+  burgerButton.addEventListener('click', function () {
+    this.classList.toggle('active');
+    menu.classList.toggle('active');
+  });
+
+  // Close the menu when a menu item is clicked
+  menu.addEventListener('click', function (e) {
+    if (e.target.tagName === 'A') {
+      burgerButton.classList.remove('active');
+      menu.classList.remove('active');
+    }
+  });
+
+  // Close the menu when clicking outside the menu
+  document.addEventListener('click', function (e) {
+    if (!burgerButton.contains(e.target) && !menu.contains(e.target)) {
+      burgerButton.classList.remove('active');
+      menu.classList.remove('active');
+    }
+  });
+
+  // Toggle the menu on window resize
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 576) {
+      burgerButton.classList.remove('active');
+      menu.classList.remove('active');
+    }
+  });
+});
+
+function closeMenu() {
+  const burgerButton = document.querySelector('.burger-button');
+  const menu = document.querySelector('.menu');
+  burgerButton.classList.remove('active');
+  menu.classList.remove('active');
+} 
+
+//Carousel ------------------------------------------------------------
 let currentSlide = 0;
 
 const showCarousel = () => {
@@ -86,7 +143,7 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
-// Datos para Tech Stack
+// Datos para Tech Stack ------------------------------------------------------------
 const techStackData = [
   { name: "HTML5", imgSrc: "media/Html5.png" },
   { name: "CSS3", imgSrc: "media/Css3.png" },
@@ -102,7 +159,7 @@ function createTechStackList() {
   const techStackContainer = document.getElementById('techStack');
   techStackData.forEach(item => {
     const listItem = document.createElement('div');
-    listItem.className = "flex flex-col items-center text-center";
+    listItem.className = "flex flex-col items-center text-center techItem";
     listItem.innerHTML = `
       <img src="${item.imgSrc}" alt="${item.name} Logo" class="w-12 h-auto mb-6">
       <span class="text-lg">${item.name}</span>
@@ -114,12 +171,12 @@ function createTechStackList() {
 // Llamada a la función para generar la lista de Tech Stack
 createTechStackList();
 
-//Datos para Proyectos
+//Datos para Proyectos ------------------------------------------------------------
 const proyectos = [
-  { nombre: "Redline Project", descripcion: "A refined local e-commerce platform that aims to guarantee the most efficient experience in PC components and assembly for its users.", imgSrc: "media/RedlineProject.jpeg" },
-  { nombre: "Kuta Coffee ", descripcion: "An e-commerce in principle, which also allows customers to place orders from the store table, providing a more comfortable and efficient experience.", imgSrc: "media/Kutacoffee.jpeg" },
-  { nombre: "Game Development", descripcion: "A retro-style pixel platformer on this web platform. Navigate through nostalgic gaming experiences. No frills, just pure exploration and enjoyment.", imgSrc: "media/Game.gif" },
-  { nombre: "Spotify App Re-Design", descripcion: "The classic Spotify application, innovating with new features to enhance the experience for the clientele, improving their interaction with the app.", imgSrc: "media/SpotifyClone.jpeg" }
+  { nombre: "Redline Project", descripcion: "A refined local e-commerce platform that aims to guarantee the most efficient experience in PC components and assembly for its users.", imgSrc: "media/RedlineProject.jpeg", repoLink: "https://github.com/PabloFabbian/Red_Line_Project" },
+  { nombre: "Kuta Coffee ", descripcion: "An e-commerce in principle, which also allows customers to place orders from the store table, providing a more comfortable and efficient experience.", imgSrc: "media/Kutacoffee.jpeg", repoLink: "https://github.com/PabloFabbian/Kuta_Coffee" },
+  { nombre: "Game Development", descripcion: "A retro-style pixel platformer on this web platform. Navigate through nostalgic gaming experiences. No frills, just pure exploration and enjoyment.", imgSrc: "media/Game.gif", repoLink: "#" },
+  { nombre: "Spotify App Re-Design", descripcion: "The classic Spotify application, innovating with new features to enhance the experience for the clientele, improving their interaction with the app.", imgSrc: "media/SpotifyClone.jpeg", repoLink: "#" }
 ];
 
 // Función para crear una card
@@ -139,11 +196,32 @@ function crearCard(proyecto) {
   nombreProyecto.className = 'text-xl font-bold my-4 mt-6 text-center nombreProyecto';
   nombreProyecto.textContent = proyecto.nombre;
 
+  // Nuevo elemento para la flechita
+  const flechita = document.createElement('div');
+  flechita.className = 'flechita';
+  flechita.innerHTML = '<i class="gg-external"></i>';
+
+  // Al hacer clic en la flechita, abrir el enlace del repositorio
+  flechita.addEventListener('click', function () {
+      window.open(proyecto.repoLink, '_blank');
+  });
+
+  // Mostrar la flechita al hacer hover
+  contenedor.addEventListener('mouseenter', function () {
+      flechita.style.opacity = "1";
+  });
+
+  // Ocultar la flechita al salir del hover
+  contenedor.addEventListener('mouseleave', function () {
+      flechita.style.opacity = "0";
+  });
+
   contenedor.appendChild(imagen);
   contenedor.appendChild(nombreProyecto);
+  contenedor.appendChild(flechita); // Mover la flechita al contenedor principal
 
   card.appendChild(contenedor);
-  
+
   const descripcion = document.createElement('p');
   descripcion.className = 'text-lg mb-4 text-center proyectoDescripcion';
   descripcion.textContent = proyecto.descripcion;
@@ -153,18 +231,46 @@ function crearCard(proyecto) {
   return card;
 }
 
+
 // Obtener el contenedor de proyectos
 const proyectosContainer = document.getElementById('proyectosContainer');
 
 // Generar las cards y añadirlas al contenedor
 proyectos.forEach(proyecto => {
-  const card = crearCard(proyecto);
-  proyectosContainer.appendChild(card);
+    const card = crearCard(proyecto);
+    proyectosContainer.appendChild(card);
 });
 
-//Formulario
+//Formulario ------------------------------------------------------------
 document.getElementById('contactForm').addEventListener('submit', function(event) {
   // Agregar la lógica de envío del formulario aquí.
   event.preventDefault();
   alert('Formulario enviado con éxito. (¡Agrega tu lógica de envío aquí!)');
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const animatedHeading = document.getElementById('animated-heading');
+
+    // Función para verificar si el elemento está en la vista
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    // Función para activar la animación cuando el elemento está en la vista
+    function handleScroll() {
+        if (isElementInViewport(animatedHeading)) {
+            animatedHeading.classList.add('animate');
+            // Eliminar el listener después de la primera vez para que no vuelva a activarse
+            window.removeEventListener('scroll', handleScroll);
+        }
+    }
+
+    // Agregar un listener de scroll
+    window.addEventListener('scroll', handleScroll);
 });

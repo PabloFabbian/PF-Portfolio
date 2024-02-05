@@ -2,62 +2,74 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"">
     <title>Pablo Fabbian - Frontend Developer & Designer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/5ed52fce3f.js" crossorigin="anonymous"></script>
     <script defer src="main.js"></script>
     <link rel="icon" href="media/CodingIcon.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/external.css' rel='stylesheet'>
 </head>
 <body>
     <header class="fixed top-0 border-b-2 border-violet-800 bg-violet-50 py-3 px-6 flex items-center justify-between w-full navbar">
-        <div class="logo-container">
+        <a href="#home" class="logo-container">    
             <img src="media/CodingIcon.png" class="devLogo w-16 h-16 mt-1">
-            <p class="logo-text text-2xl font-bold">PF Web Portfolio</p>
-        </div>
-        <nav class="flex items-center">
-            <ul class="flex space-x-9 mr-10">
-                <li><a href="#home" class="hover:text-purple-800">Home</a></li>
-                <li><a href="#about" class="hover:text-purple-800">About</a></li>
-                <li><a href="#projects" class="hover:text-purple-800">Projects</a></li>
-                <li><a href="#" class="hover:text-purple-800">Skills</a></li>
-                <li><a href="#contact" class="hover:text-purple-800">Contact</a></li>
+            <p class="logo-text text-2xl font-bold">PF Portfolio</p>
+        </a>
+
+        <button class="burger-button">
+            <div class="burger-button__line"></div>
+            <div class="burger-button__line"></div>
+            <div class="burger-button__line"></div>
+        </button>
+
+        <nav class="burger-menu">
+            <ul class="flex flex-col items-center">
+                <li><a href="#home" onclick="closeMenu()">Home</a></li>
+                <li><a href="#about" onclick="closeMenu()">About</a></li>
+                <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
+                <li><a href="#" onclick="closeMenu()">Skills</a></li>
+                <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
             </ul>
-        </nav>
+        </nav>     
     </header>
 
     <main id="home" class="bg-white py-8">
-        <div class="max-w-7xl mx-auto flex flex-row items-center justify-between">
+        <div class="mainInnerContainer max-w-7xl mx-auto flex flex-row items-center justify-between">
             <img src="media/Brush1.png" class="Brush1">
             <img src="media/Brush2.png" class="Brush2">
-            <div class="text-left presentacion">
-                <h1 class="text-4xl font-bold mb-4">Hi there! I'm <span class="text-violet-600 hover:text-violet-800 name">Pablo Fabbian</span> 👋</h1>
-                <h2 class="text-2xl font-normal ml-0.5"><b class="text-violet-600">Frontend Dev</b> & <b class="text-violet-600">Design Enthusiast</b>,</h2>
-                <h2 class="text-2xl font-normal ml-0.5 mb-6">based in <b>Buenos Aires, Argentina</b></h2>
-                <div class="mt-4 flex justify-left">
-                    <a href="https://www.linkedin.com/in/pablofabbian/" target="_blank" class="transition duration-300 transition-transform hover:scale-125 hover:border-blue-500  w-12 h-12 rounded-full border border-brown-400 hover:bg-brown-400 hover:text-blue-800 flex items-center justify-center">
-                        <i class="fa-brands fa-linkedin text-2xl"></i>
-                    </a>
-                    <a href="https://github.com/PabloFabbian" target="_blank" class="transition duration-300 transition-transform hover:scale-125 hover:border-indigo-500  w-12 h-12 rounded-full border border-brown-400 hover:bg-brown-400 hover:text-indigo-700 flex items-center justify-center ml-4">
-                        <i class="fa-brands fa-github text-2xl"></i>
-                    </a>
-                    <a href="https://www.threads.net/@pablo.fabbian" target="_blank" class="transition duration-300 transition-transform hover:scale-125 hover:border-blue-500  w-12 h-12 rounded-full border border-brown-400 hover:bg-brown-400 hover:text-blue-400 flex items-center justify-center ml-4">
-                        <i class="fa-brands fa-threads text-2xl"></i>
-                    </a>
-                </div>
+            <div class="presentacion text-left">
+                <h1 class="text-4xl mb-4 font-bold animate__animated animate__fadeInLeft animate__fast 800ms">Hi there! I'm <span class="text-violet-600 hover:text-violet-800 name">Pablo Fabbian</span> 👋</h1>
+                <span class="presentacionSpan animate__animated animate__fadeIn animate__delay-1s">
+                    <h2 class="text-2xl font-normal ml-0.5"><b class="text-violet-600">Frontend Dev</b> & <b class="text-violet-600">Design Enthusiast</b>,</h2>
+                    <h2 class="presentacion-h2__1 text-2xl font-normal ml-0.5 mb-6">based in <b>Buenos Aires, Argentina</b></h2>
+                    <div class="social-pills mt-4 flex justify-left">
+                        <a href="https://www.linkedin.com/in/pablofabbian/" target="_blank" class="inline-flex items-center rounded-full border h-12 w-auto mr-4 px-4 transition-transform transition duration-275 hover:scale-[1.1] hover:border-blue-500 hover:text-blue-700">
+                            <i class="fa-brands fa-linkedin text-2xl mr-2"></i>Linkedin
+                        </a>
+                        <a href="https://github.com/PabloFabbian" target="_blank" class="inline-flex items-center rounded-full border h-12 w-auto mr-4 px-4 transition-transform transition duration-275 hover:scale-[1.1] hover:border-violet-500 hover:text-violet-700">
+                            <i class="fa-brands fa-github text-2xl mr-2"></i>Github
+                        </a>
+                        <a href="https://www.threads.net/@pablo.fabbian" target="_blank" class="inline-flex items-center rounded-full border h-12 w-auto px-4 transition-transform transition duration-275 hover:scale-[1.1] hover:border-indigo-500 hover:text-indigo-700">
+                            <i class="fa-brands fa-threads text-2xl mr-2"></i>Threads
+                        </a>
+                    </div>
+                </span>
             </div>
             <div class="w-full lg:w-6/12 mb-7 logotipo">
-                <img class="rounded-full h-90 w-auto object-cover floating-image" src="media/Dev3.jpg" alt="Profile Picture">
+                <img class="rounded-full h-85 w-auto object-cover floating-image sitting-dev" src="media/Dev3.jpg" alt="Profile Picture">
             </div>
         </div>
     </main>
 
     <aside id="about" class="flex bg-gray-100 py-7 px-6 rounded-full AboutmeContainer1">
-        <div class="flex-shrink-0">
-            <img id="profile-photo" src="media/ProfilePhoto.jpeg" class="rounded-full h-36 w-36 cursor-pointer floating-image mb-4 mt-1" alt="Profile Photo" onclick="showCarousel()">
+        <div id="profile-photo" class="flex-shrink-0">
+            <img src="media/ProfilePhoto.jpeg" class="rounded-full h-36 w-36 cursor-pointer floating-image mb-4 mt-1" alt="Profile Photo" onclick="showCarousel()">
         </div>
-        <div class="ml-8 mt-4">
+        <div class="ml-8 mt-4 text">
             <h3 class="text-3xl font-bold mb-3">About me</h3>
             <p class="text-lg">Proactive, empathetic, and creative individual with a dedicated commitment to service. I am currently seeking a dynamic position that not only fosters my professional growth but also allows me to pursue ongoing studies, contributing to both my personal and career development endeavors.</p>
         </div>
@@ -76,34 +88,39 @@
     <div class="flex items-center rounded-lg AboutmeContainer2">
         <article id="techStack" class="container mx-auto p-4 w-3/4 flex justify-around">
             <h4 class="text-3xl font-bold mb-4">Tech Stack</h4>
+            <div class="techStack-content">
             <!-- Contenido de Tech Stack generado con JavaScript -->
+            </div>
         </article>
     
-        <aside id="studies" class="p-4 w-1/4 AboutmeContainer3">
-            <h4 class="text-3xl font-bold mt-2 mr-1 mb-3 ml-4">Studies</h4>
-            <ul class="space-y-4 mb-2 mr-4 ml-4">
-                <li>
+        <aside id="studies" class="p-4 w-1/4 AboutmeContainer3 flex flex-col">
+            <h4 class="text-3xl font-bold mt-2 mb-3 ml-4">Studies</h4>
+            <ul class="space-y-4 mb-2 ml-4 flex flex-wrap">
+                <li class="flex flex-col">
                     <p class="text-lg">React Frontend Development Career</p>
                     <h5 class="text-gray-500 text-sm mb-2">2022 - 2023 | Coderhouse eLearning</h5>
                 </li>
-                <li>
-                    <p class="text-lg">Computer Science</p>
+                <li class="flex flex-col">
+                    <p class="text-lg">Computational Science Area</p>
                     <h5 class="text-gray-500 text-sm mb-2">2023 - At the moment | University of Buenos Aires</h5>
                 </li>
             </ul>
         </aside>
     </div>
     
+    
     <section id="projects" class="container mx-auto p-4 mt-8">
-        <h2 class="text-5xl font-bold mb-4 text-center pt-2">My <span class="text-violet-600">projects</span></h2>
-        <h3 class="text-2xl font-medium mb-10 text-center">Dream it, do it, show them!</h3>
+        <h2 class="title text-5xl font-bold mb-4 text-center pt-2">My <span class="text-violet-600">projects</span></h2>
+        <h3 class="subtitle text-2xl font-medium mb-10 text-center">Dream it, do it, show them!</h3>
     
         <div id="proyectosContainer" class="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
-    </section>
+    </section>    
 
     <div id="contact" class="flex justify-between items-center h-screen bg-violet-50 mt-8">
-        <div class="w-3/6">
-            <h1 class="text-5xl font-bold text-left mb-8"><span class="text-violet-600">Hey</span> there!</h1>
+        <div class="HEY w-3/6">
+            <h1 class="text-5xl font-bold text-left mb-8 jump-animation" id="animated-heading">
+                <span class="text-violet-600">Hey</span> there!
+            </h1>              
             <p class="text-2xl font-medium mb-8 text-left invitationText">Feel free to fill out the next form. It'll land straight into my inbox. Can't wait to chat with you!</p>
         </div>
         <div class="container mx-auto w-2/3 contactMeForm">
@@ -123,7 +140,7 @@
                             <label for="message" class="block text-sm font-medium form-label">Message</label>
                             <textarea id="message" name="message" rows="4" class="form-input" required></textarea>
                         </div>
-                        <button type="submit" class="form-button border border-2 mb-10">Send Message</button>
+                        <button type="submit" class="form-button border border-2 mb-10"><span class="button-text">Send Message</span></button>
                     </form>
                 </div>
             </div>
@@ -136,7 +153,7 @@
             <p class="text-sm">&copy; 2024 Pablo Fabbian. All rights reserved.</p>
 
             <!-- Redes sociales y botón de contacto -->
-            <div class="flex items-center space-x-4">
+            <div class="social-pills-2 flex items-center space-x-4">
                 <div class="flex justify-left mr-4">
                     <a href="https://www.linkedin.com/in/pablofabbian/" target="_blank" class="w-10 h-10 rounded-full border hover:border-blue-500 hover:text-blue-500 flex items-center justify-center ml-4 hover:scale-110 transition duration-300">
                         <i class="fa-brands fa-linkedin text-2xl"></i>
@@ -155,9 +172,9 @@
                     </a>
                 </div>
 
-                <button href="#" class="bg-violet-500 text-lg border-2 border-violet-900 text-white px-6 py-2 rounded-full hover:bg-violet-600 transition duration-300 hover:scale-105">
+                <a href="#contact" class="bg-violet-500 text-lg border-2 border-violet-900 text-white px-6 py-2 rounded-full hover:bg-violet-600 transition duration-300 hover:scale-105">
                     Contact me
-                </button>
+                </a>
             </div>
         </div>
     </footer>
