@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Toggle the menu on window resize
   window.addEventListener('resize', function () {
-    if (window.innerWidth > 576) {
+    if (window.innerWidth > 415) {
       burgerButton.classList.remove('active');
       menu.classList.remove('active');
     }

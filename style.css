@@ -5,48 +5,104 @@ html{
     overflow-y: auto;
 }
 
-/*Scrollbar ------------------------------------------------------------*/
+/*----------------- ---------------- Scrollbar ---------------- -----------------*/
 body::-webkit-scrollbar {
     width: 14px;
 }
-
 body::-webkit-scrollbar-thumb {
     background-color: #9808f218;
 }
-
 body::-webkit-scrollbar-track {
     background-color: #f0f0f0;
 }
 
-/*Navbar ---------------------------------------------------------------*/
+/*----------------- ----------------- Header ----------------- -----------------*/
 header{
     z-index: 3;
-    background: linear-gradient(to bottom, #d4c7f3, #ccf2fb86);
-}
+    background: linear-gradient(to bottom, #c2afee, rgba(134, 217, 236, 0.442));
+    opacity: 85%;
+    }
+    .logo-container{
+        display: flex;
+        align-items: center;
+        }
+        .devLogo{
+            margin-left: 9vh;
+            cursor: pointer;
+        }
+        .logo-text{
+            font-size: 1.75rem;
+            margin-left: 1rem;
+            cursor: pointer;
+        }
 
-.logo-container{
-    display: flex;
-    align-items: center;
-}
+    .burger-menu {
+        display: contents;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        padding: 10px;
+        border-radius: 8px;
+        }
+        .burger-menu.active {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .burger-menu ul {
+            flex-direction: row;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+            .burger-menu li{
+                display: inline-block;
+                text-align: center;
+                width: 90px;
+            }
+            .burger-menu li:last-child{
+                margin-right: 6.25vh;
+            }
+                .burger-menu a{
+                    position: relative;
+                }
+                .burger-menu a:hover::after {
+                    transform: scaleY(1);
+                }
+                .burger-menu a:hover{
+                    font-weight: 500;
+                    color: #6b46c1;
+                    transition: transform 0.3s;
+                }
+                .burger-menu a::after {
+                    content: '';
+                    display: block;
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 100%;
+                    background-color: #8a2be2;
+                    position: absolute;
+                    bottom: -10px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    transform: scaleY(0);
+                    transition: transform 0.3s ease;
+                }
 
-.devLogo{
-    margin-left: 9vh;
-    cursor: pointer;
-}
+    .burger-button {
+        display: none;
+        cursor: pointer;
+    }
+    .burger-button__line {
+        width: 25px;
+        height: 3px;
+        background-color: #333;
+        margin: 5px 0;
+    }
 
-.logo-text{
-    font-size: 1.75rem;
-    margin-left: 1rem;
-    cursor: pointer;
-}
-
-nav{
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-right: 20px;
-}
-
-/*Main -----------------------------------------------------------------*/
+/*----------------- ----------------- Home ----------------- -----------------*/
 main{
     margin-top: 9vh;
     padding-top: 20vh;
@@ -104,9 +160,10 @@ main{
     animation: float 5s infinite;
 }
 
-/*Aside ---------------------------------------------------------------*/
+/*----------------- --------------- About Me --------------- -----------------*/
 aside{
     scroll-margin-top: 160px;
+    opacity: 85%;
 }
 
 .AboutmeContainer1{
@@ -204,7 +261,7 @@ aside{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    opacity: 97%;
+    opacity: 85%;
 }
 
 #techStack h4{
@@ -214,8 +271,8 @@ aside{
     align-items: center;
 }
 
-/*Section ------------------------------------------------------------*/
-section{
+/*----------------- -------------- My Projects -------------- -----------------*/
+    section{
     scroll-margin-top: 97px;
 }
 
@@ -279,8 +336,8 @@ section{
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-/*Contact form ------------------------------------------------------------*/
-#contact{
+/*----------------- -------------- Contact Me -------------- -----------------*/
+    #contact{
     scroll-margin-top: 90px;
     background: linear-gradient(to left, #6930c3, #72efdd );
 }
@@ -289,12 +346,11 @@ section{
     opacity: 0;
     transform: translateY(0);
     transition: opacity 1s ease-out, transform 1s ease-out;
-}
-
-.jump-animation.animate {
-    opacity: 1;
-    transform: translateY(-20px);
-}
+    }
+    .jump-animation.animate {
+        opacity: 1;
+        transform: translateY(-20px);
+    }
 
 .invitationText{
     text-wrap: pretty;
@@ -325,12 +381,11 @@ section{
     margin-bottom: 15px;
     width: 100%;
     transition: border-color 0.3s;
-}
-
-.form-input:focus {
-    outline: 2.5px solid;
-    outline-color: #6d4acf;
-}
+    }
+    .form-input:focus {
+        outline: 2.5px solid;
+        outline-color: #6d4acf;
+    }
 
 .form-button {
     color: #ffffff;
@@ -339,92 +394,118 @@ section{
     cursor: pointer;
     transition: background-color 0.4s;
 }
-
 .form-button:hover {
-    background-color: #3760dd;
-    border-color: #340a35;
-}
+        background-color: #3760dd;
+        border-color: #340a35;
+    }
 
-/*Footer ------------------------------------------------------------*/
-footer{
+    /*----------------- ---------------- Footer ---------------- -----------------*/
+    footer{
     padding-top: 55vh;
     padding-bottom: 55vh;
     background-color: #2C2C2C;
 }
-
 .fa-twitter{
     padding-left: 1.5px;
 }
-
 .fa-instagram{
     font-size:180%;
     padding-bottom: 0.5px;
 }
-
 .fa-whatsapp{
     font-size: 165%;
     padding-bottom: 1.5px;
     padding-left: 1px;
 }
 
-/*---------------------------------------------------------------------------------*/
-/*----------------------------- MOBILE SECTION ------------------------------------*/
-/*---------------------------------------------------------------------------------*/
+/*----------------- ----------------- Mobile Section ----------------- -----------------*/
 
-@media (max-width: 992px) {
-/*Home -------------------------------------------------------*/
+
+
+@media only screen and (max-width: 992px) {
+    /*----------------- ----------------- Home ----------------- -----------------*/
     .Brush1{
         top: -20px;
         left: -150px;
-        height: 25%;
+        height: 20%;
     }
     .Brush2{
-        left: 300px;
-        top: 490px;
+        left: 340px;
+        top: 500px;
     }
     .presentacion{
         margin-top: 20px;
     }
-    .sitting-dev{
-        height: auto;
-        width: 80%;
-    }
+        .sitting-dev{
+            height: auto;
+            width: 80%;
+        }
     .py-7{
         padding-top: 1rem;
         margin-bottom: 2rem;
         margin-top: 1.5rem;
     }
+
+    /*----------------- --------------- About Me --------------- -----------------*/
     #profile-photo{
         margin-top: 1.2rem;
     }
+
+    /*Educational*/
     .AboutmeContainer2{
         flex: auto;
         flex-wrap: wrap;
         align-items: flex-start;
+        margin-inline: 15vh;
     }
-    #techStack{
-        align-items: center;
-        justify-content: space-between;
-        margin-top: 2.5%;
-        width: 95%;
-    }
-    #studies {
-        width: 100%;
-        align-items: center;
-        margin-bottom: 2.5%;
-    }
-    #studies h4{
-        margin-left: 0;
-    }
-    #studies ul{
-        margin-right: 0;
-        align-items: center;
-    }
-    #studies li{
-        margin-right: 2rem;
-        margin-top: 0;
-        align-items: center;
-    }
+
+        /*Tech Stack*/
+        #techStack{
+            order: 1;
+            flex-wrap: wrap;
+            align-items: center;
+            padding-top: 5%;
+            width: 90%;
+            }
+            #techStack h4{
+                width: 100%;
+                display: block;
+                margin-bottom: 5%;
+                transform: scale(1.1);
+                }
+            .techStack-content{
+                display: flex;
+                flex-wrap: wrap;
+                }
+            .techItem {
+                margin-bottom: 25px;
+                margin-inline: 2px;
+                }
+                .techItem img{
+                    margin-bottom: 10px;
+                    margin-inline: 10px;
+                }
+
+        /*Studies*/
+        #studies{
+            order: 2;
+            width: 100%;
+            text-align: center;
+            padding-top: 0%;
+            }
+            #studies h4{
+                transform: scale(1.1);
+                margin-right: 1rem;
+            }
+            #studies ul{
+                margin-left: 0;
+                display: flex;
+                text-align: center;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+
+    /*----------------- -------------- My Projects -------------- -----------------*/
     section{
         max-width: fit-content;
     }
@@ -473,142 +554,24 @@ footer{
         margin-right: 2.5%;
         padding: 14px;
     }
-    contact-form{
-        margin-top: 0;
-        height: 80%;
-    }
-}
 
-@media (max-width: 768px) {
-/*Navbar -------------------------------------------------------*/
-    .devLogo{
-        margin-left: 5vh;
-    }
-    .logo-text{
-        transform: scale(0.8);
-        white-space: nowrap;
-        margin-left: 0%;
-    }
-    nav{
-        padding-right: 0%;
-        transform: scale(0.9);
-        margin-right: -2%;
-    }
-    .burger-menu li {
-        width: 75px;
-    }
-
-/*Home -------------------------------------------------------*/
-    .Brush1{
-        top: -10px;
-    }
-    .Brush2{
-        top: 390px;
-        left: 350px;
-        transform: scale(0.9);
-        rotate: 195deg;
-    }
-    .presentacion{
-        transform: scale(0.8);
-        margin-top: 7.5%;
-        margin-left: 2%;
-    }
-    .presentacionSpan :first-child{
-        margin-top: 1%;
-    }
-    .sitting-dev{
-        transform: scale(0.9);
-        margin-right: 200%;
-    }
-    .presentacion h1{
-        white-space: nowrap;
-        margin-bottom: 0%;
-    }
-    .presentacion h2{
-        margin-top: -5%;
-        line-height: 2.3;
-    }
-    .sitting-dev{
-        margin-top: 8%;
-        margin-right: 18%;
-        height: auto;
-        width: 105%;
-    }
-
-/*About ------------------------------------------------------*/
-    #about{
-        padding-top: 0%;
-        padding-bottom: 1.75%;
-        align-items: center;
-        margin-left: 5%;
-        margin-right: 5%;
-        padding-left: 0%;
-        padding-right: 0%;
-        opacity: 97%;
-    }
-    #profile-photo{
-        margin-top: 0%;
-        margin-left: 5%;
-    }
-    #profile-photo img{
-        margin-bottom: 0%;
-    }
-    #about .text{
-        transform: scale(0.8);
-        margin-left: 0%;
-    }
-
-/*About 2.0 --------------------------------------------------*/
-    .AboutmeContainer2{
-        width: 85%;
-        text-align: center;
-        align-items: center;
-        padding-right: 0px;
-        margin-left: 8vh;
-    }
-    #techStack{
-        justify-content: center;
-        transform: scale(0.9);
-        width: 100%;
-        padding-bottom: 0%;
-    }
-    #techStack h4{
-        white-space: nowrap;
-        margin-right: 2%;
-    }
-    #techStack div{
-        margin-left: 2.5%;
-    }
-    #studies{
-        padding-top: 0%;
-        margin-bottom: 0;
-    }
-    #studies h4{
-        margin-bottom: 2.5%;
-    }
-
-/*Projects --------------------------------------------------*/
-    #projects{
-        transform: scale(0.8);
-        padding: 0%;
-        margin-top: 0rem;
-    }
-
-/*Contact me ------------------------------------------------*/
+    /*----------------- -------------- Contact Me -------------- -----------------*/
     #contact{
         margin-top: 0rem;
-        height:fit-content;
-        margin-bottom: 10vh;
+        height: fit-content;
+        margin-top: 6vh;
     }
         #contact h1, #contact h2, #contact p{
             transform: scale(0.8);
             margin-left: 0%;
         }
-        .container .h-screen{
-            height:fit-content;
+        .contactMeForm div{
+            height: fit-content !important;
         }
     .contact-form{
         padding: 0%;
+        margin-bottom: 6vh;
+        margin-top: 10vh;
     }
         .contact-form h2{
             margin-bottom: -7.5%;
@@ -619,294 +582,228 @@ footer{
         #contactForm button{
             margin-bottom: 0%;
         }
-
-/*Footer --------------------------------------------------*/
-    footer div{
-        transform: scale(0.9);
-    }
-    .p-8{
-        padding: 1.25rem;
-    }
 }
 
-    .burger-menu {
-        display:contents;
-        position: absolute;
-        top: 60px;
-        right: 10px;
-        background-color: #fff;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        padding: 10px;
-        border-radius: 8px;
-    }
 
-    .burger-menu.active {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .burger-menu ul {
-        flex-direction: row;
-        list-style: none;
-        padding: 0;
-        margin: 0;
+@media screen and (max-width: 500px) {
+    html{
+        overflow-x: auto;
+        overflow-y: auto;
     }
-    .burger-menu li{
-        display: inline-block;
-        text-align: center;
-        width: 90px;
-    }
+    /*----------------- ----------------- Header ----------------- -----------------*/
+    header {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        opacity: 90%;
+        }
+        .devLogo {
+            margin-left: 0%;
+        }
+        .devLogo p{
+            white-space: none;
+        }
 
-    .burger-menu li:last-child{
-        margin-right: 6.25vh;
-    }
-
-    .burger-menu a{
-        position: relative;
-    }
-
-    .burger-menu a:hover{
-        font-weight: 500;
-        color: #6b46c1;
-        transition: transform 0.3s;
-    }
-
-    .burger-menu a::after {
-        content: '';
-        display: block;
-        width: 6px;
-        height: 6px;
-        border-radius: 100%;
-        background-color: #8a2be2;
-        position: absolute;
-        bottom: -10px;
-        left: 50%;
-        transform: translateX(-50%);
-        transform: scaleY(0);
-        transition: transform 0.3s ease;
-    }
-
-    .burger-menu a:hover::after {
-        transform: scaleY(1);
-    }
-
+    /*Burger Button*/
     .burger-button {
-        display: none;
-        cursor: pointer;
+        display:block;
     }
-
     .burger-button__line {
         width: 25px;
         height: 3px;
         background-color: #333;
         margin: 5px 0;
-}
+    }
 
-@media (max-width: 576px) {
-    /*Navbar -------------------------------------------------------*/
-    header{
-        padding-top: 0.5rem !important;
-        padding-bottom: 0.5rem !important;
-    }
-    .logo-container{
-        margin-left: 3.5%;
-    }
-    .devLogo{
-        margin-left: 0%;
-    }
-    .logo-text{
-        text-align: left;
-    }
+    /*Burger Menu*/
     .burger-menu {
-        background: linear-gradient(to top, #b8d0eb, #ddfff7db);
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        z-index: 1000;
-        width: 100%;
-        height: 1%;
         display: none;
+        position: absolute;
+        top: 12vh;
+        right: 10px;
+        background: linear-gradient(to bottom, #5e60ce95, #00b4d891);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        padding: 10px;
+        border-radius: 8px;
+    }
+    .burger-menu.active {
+        display: flex;
         position: fixed;
-        align-items: center;
+        padding-inline: 0vh;
         flex-direction: column;
         justify-content: center;
+        border: 1px solid #6f2dbd;
+        align-items: center;
+        height: 30vh;
+        width: 65vw;
     }
-        .burger-menu.active {
-            display: contents;
-            flex-direction: column;
-            padding-inline: 0vh;
-            width: 65vh;
-            height: 60vh;
-            top: 40vh;
-            left: 26vh;
-            border: 1px solid #6f2dbd;
+    
+    .burger-menu ul {
+        flex-direction: column;
+        list-style: none;
+        padding: 0;
+        margin: 0;
         }
-        .burger-menu ul{
-            flex-direction: column;
-        }
-        .burger-menu li {
-            line-height: 5vh;
+        .burger-menu li{
+            display: inline-block;
+            text-align: center;
+            line-height: 3.5vh;
             border-bottom: 2px groove #702dbd71;
-            padding-inline: 100px;
+            padding-inline: 80px;
             border-radius: 1%;
             padding-bottom: 8px;
             margin-bottom: 8px;
             width: 100%;
         }
-        .burger-menu li a {
+        .burger-menu li:last-child{
+            margin-right: 0vh;
+            border-bottom: 0px;
+        }
+        .burger-menu li a{
             width: 100%;
             color: #333333;
+            text-shadow: 0 1px 2px #8fa5fb;
             padding-bottom: 10px;
             box-sizing: border-box;
             font-weight: 500;
         }
-        .burger-menu li:first-child{
-            padding-top: 2.5%;
-        }
-        .burger-menu li:last-child{
-            margin-right: 0px;
-            border-bottom: 0px;
+        .burger-menu a::after {
+            content: '';
+            display: block;
+            width: 6px;
+            height: 6px;
+            border-radius: 100%;
+            background-color: #8a2be2;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            transform: scaleY(0);
+            transition: transform 0.3s ease;
         }
     
-    .burger-button {
-        display: block;
-        margin-right: 5%;
-    }
     .burger-button.active ~ .burger-menu {
         display: flex;
         justify-content: center;
     }
-    
 
-    /*Home ---------------------------------------------------------*/
+    /*----------------- ----------------- Home ----------------- -----------------*/
     .Brush1{
-        opacity: 90%;
-        left: -20%;
+        top: -5vh;
+        left: -18vh;
+        height: 25%;
     }
     .Brush2{
-        left: 395px;
-        top: 520px;
-        opacity: 90%;
+        transform: scaleX(-1);
+        rotate: 125deg;
+        left: -20vh;
+        top: 128vh;
     }
     .mainInnerContainer{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column-reverse !important;
     }
+
+    /*Gran Imagen*/
     .logotipo{
-        order: 1;
-        width: 100%;
-        margin-bottom: 0rem !important;
-    }
-        .sitting-dev{
-            margin: 0;
-            max-width: 55%;
-            top: 3.5%;
-        }
-    .presentacion{
-        width: 100%;
-        margin-top: 3%;
-        margin-left: 0;
         order: 2;
-        text-align: center;
-    }
-        .presentacion h1{
-            margin-top: 0;
-            margin-bottom: 2.5%;
-            margin-left: 0%;
-            margin-right: 9%;
-            text-align: end;
+        margin-top: 4vh;
         }
-        .presentacion h2{
-            margin-top: 0%;
-            margin-right: 10%;
-            line-height: 1.5;
-            text-align: right;
+        .sitting-dev{
+            height: auto;
+            max-width: 80%;
         }
-        .presentacion-h2__1{
-            margin-right: 4%;
-            margin-bottom: 5%;
+    
+    /*Presentación*/
+    .presentacion{
+        margin-left: 0vh;
+        order: 1;
+        margin-top: 0;
+        text-align: center !important;
         }
         .social-pills{
-            margin-top: 0%;
-            margin-left: 8.5%;
+            justify-content: center;
         }
 
-    /*About --------------------------------------------------------*/
-    aside{
-        transform: scale(0.9);
-    }
-        #about{
-            margin-inline: -4%
+    /*----------------- --------------- About Me --------------- -----------------*/
+    #about {
+        opacity: 90%;
+        margin-inline: 1vh;
+        border-radius: 5% !important;
         }
         #profile-photo{
-            margin-left: 7%;
+            text-align: center;
+            margin-top: 5%;
         }
         .text{
-            margin-top: 3%;
+            margin-left: 10%;
         }
-            .text p{
-                margin-bottom: 3%;
+        .text p{
+            justify-content: pretty;
+            margin-right: 0%;
+        }
+
+    /*Educational*/
+    .AboutmeContainer2 {
+        width: 96%;
+        margin-inline: 1vh;
+        border-radius: 5%;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding-right: 0%;
+    }
+        /*Tech Stack*/
+        #techStack{
+            order: 1;
+            flex-wrap: wrap;
+            align-items: center;
+            padding-top: 8%;
+            width: 90%;
+            }
+            #techStack h4{
+                width: 100%;
+                display: block;
+                margin-bottom: 25px;
+                }
+            .techStack-content{
+                display: flex;
+                flex-wrap: wrap;
+                }
+            .techItem {
+                margin-bottom: 25px;
+                margin-inline: 2px;
+                }
+                .techItem img{
+                    margin-bottom: 10px;
+                    margin-inline: 10px;
+                }
+        /*Studies*/
+        #studies{
+            order: 2;
+            width: 100%;
+            text-align: center;
+            padding-top: 0%;
+            }
+            #studies h4{
+                margin-right: 1rem;
+            }
+            #studies ul{
+                margin-left: 0;
+                display: inline-block;
+                text-align: center;
             }
 
-    /*About 2.0 ----------------------------------------------------*/
-    .AboutmeContainer2{
-        transform: scale(0.8);
-        margin-inline: -16%;    
-        width: fit-content;
-        padding-inline: 3vh;
-    }
-    #techStack{
-        transform: scale(1);
-        padding-inline: 0;
-        margin-bottom: 4%;
-        margin-top: 4%;
-    }
-    #studies h4{
-        transform: scale(1.1);
-        margin-bottom: 3%;
-    }
-
-    /*Projects -----------------------------------------------------*/
-    section{
-        transform: scale(0.9);
-        margin-bottom: 5%;
-        padding: 0;
-    }
-    .subtitle{
-        margin-bottom: 12%;
-    }
-    .mt-8{
-        margin-top: 0%;
-    }
-    #projects{
-        margin-bottom: 0;
-    }
+    /*----------------- -------------- My Projects -------------- -----------------*/
     #proyectosContainer{
-        row-gap: 50px;
-        column-gap: 0px;
-    }
-    .card{
-        display: contents;
-    }
-    .contenedorProyecto img{
-        width: 90%;
+        column-gap: 10px;
+        width: 85%;
         height: 85%;
-    }
-    .proyectoDescripcion{
-        text-align: left;
-        margin-bottom: 11%;
-        margin-top: 0%;
-        margin-left: 3%;
+        margin-left: -5%;
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        margin: 0 auto;
     }
 
-    /*Contact me ---------------------------------------------------*/
+    /*----------------- -------------- Contact Me -------------- -----------------*/
     .contact-form h2{
         margin-top: 0px;
     }
@@ -917,155 +814,45 @@ footer{
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 0;
+        margin-top: 0;
+        padding-bottom: 106vh !important;
     }
-    .HEY{
-        width: 75%;
-        margin-top: 5%;
-    }
-        .HEY h1, .HEY p{
+        /*Hey There!*/
+        .HEY{
+            width: 75%;
+            margin-top: 15%;
+            margin-left: 0%;
             text-align: center;
-        }
-        .HEY h1{
-            margin-bottom: 1%;
-        }
-        .HEY p{
-            margin-right: 0%;
-            margin-bottom: 10%;
-        }
-    .container{
-        width: 100%;
-        transform: scale(0.85);
-        margin-top: -7.5%;
-    }
-    .contact-form h2{
-        margin-bottom: 1px;
-    }
-    /*Footer -------------------------------------------------------*/
-    footer a{
-        white-space: nowrap;
-    }
-}
-@media (max-width: 360px) {
-    .burger-menu.active {
-        display: contents;
-        flex-direction: column;
-        padding-inline: 0vh;
-        width: 65vh;
-        height: 60vh;
-        top: 40vh;
-        left: 4.5vh;
-        border: 1px solid #6f2dbd;
-    }
-    .logo-container{
-        transform: scale(0.8);
-        margin-left: -5px;
-    }
-    .burger-button{
-        transform: scale(0.8);
-        margin-top: 1px;
-    }
+            }
+            .HEY h1, .HEY p{
+                text-align: center;
+                margin-left: 0%;
+            }
+            .HEY h1{
+                margin-bottom: 1%;
+                white-space: nowrap !important;
+            }
+            .invitationText{
+                width: 100%;
+                margin-right: 0rem;
+                margin-bottom: 12%;
+            }
+        /*Form*/
+        .contactMeForm{
+            width: 100% !important;
+            transform: scale(0.85);
+            margin-top: -12%;
+            }
+            .contactMeForm div{
+                height: auto;
+            }
+            .contact-form h2{
+                margin-bottom: 8%;
+                margin-top: 6%;
+            }
 
-    /*Home */
-    #home{
-        padding-bottom: 0%;
-    }
-    .Brush1{
-        margin-left: -15px;
-    }
-    .Brush2{
-        top: 560px;
-        left: 140px;
-    }
-    .logotipo{
-        margin-top: 20px;
-    }
-    .presentacion h1{
-        margin-left: -28px;
-    }
-    .presentacion h2{
-        place-items: center;
-        white-space: nowrap;
-        margin-left: -6.5%;
-    }
-    .presentacion-h2__1{
-        margin-left: 0%;
-    }
-    .presentacionSpan{
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .social-pills{
-        margin-top: 20px;
-        margin-left: 50px;
-    }
-    /*About*/
-    #about{
-        border-radius: 4%;
-        opacity: 97% !important;
-    }
-    .AboutmeContainer2{
-        display: flex;
-        width: 100%;
-        margin-inline: 0.25px;
-    }
-    #techStack{
-        flex-wrap: wrap;
-        margin-bottom: 0%;
-    }
-    #techStack h4{
-        width: 100%;
-        display: block;
-        margin-bottom: 25px;
-        margin-right: 0%;
-    }
-    .techStack-content{
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .techItem {
-        margin-bottom: 25px;
-    }
-    .techItem img{
-        margin-bottom: 10px;
-        margin-inline: 10px;
-    }
-    #studies h4{
-        margin-bottom: 20px;
-    }
-    #studies{
-        margin-right: 0;
-    }
-    #studies ul li{
-        margin-right: 0rem;
-    }
-    /*Projects*/
-    #proyectosContainer{
-        column-gap: 10px;
-        width: 110%;
-        margin-left: -5%;
-    }
-    .flechita{
-        margin-top: 12%;
-        margin-right: 22%;
-    }
-    .nombreProyecto{
-        margin-left: -5%;
-    }
-    /*Contact Form*/
-    .HEY{
-        margin-top: 10%;
-        white-space: none;
-        margin-bottom: 15px;
-        width: 100% !important;
-    }
-    .container{
-        width: 95% !important;
-    }
-    .HEY p{
-        margin-bottom: 0%;
-    }
-    /*Footer*/
+    /*----------------- ---------------- Footer ---------------- -----------------*/
+    footer
     .social-pills-2{
         flex-wrap: wrap;
         justify-content: flex-end;
@@ -1073,7 +860,7 @@ footer{
     }
     .social-pills-2 div{
         order: 2;
-        margin-right: -5%;
+        margin-right: 1%;
         margin-top: 5%;
     }
     .social-pills-2 a{
