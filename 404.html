@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pablo Fabbian | 404 Error</title>
+    <link rel="stylesheet" href="404.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="media/Decor/CodingIcon.png" />
+</head>
+<body>
+    <header class="fixed top-0 border-b-2 border-violet-800 bg-violet-50 py-3 px-6 flex items-center justify-between w-full navbar">
+        <a href="#home" class="logo-container">    
+            <img src="media/Decor/CodingIcon.png" class="devLogo w-16 h-16 mt-1">
+            <p class="logo-text text-2xl font-bold">PF Portfolio</p>
+        </a>
+
+        <button class="burger-button">
+            <div class="burger-button__line"></div>
+            <div class="burger-button__line"></div>
+            <div class="burger-button__line"></div>
+        </button>
+        
+        <nav class="burger-menu">
+            <ul class="flex flex-col items-center">
+                <li><a href="#" onclick="handleLinkClick('home'); closeMenu()">Home</a></li>
+                <li><a href="#" onclick="handleLinkClick('about'); closeMenu()">About</a></li>
+                <li><a href="#" onclick="handleLinkClick('skills'); closeMenu()">Skills</a></li>
+                <li><a href="#" onclick="handleLinkClick('projects'); closeMenu()">Projects</a></li>
+                <li><a href="#" onclick="handleLinkClick('contact'); closeMenu()">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="error-container">
+        <div><img src="media/Decor/404.gif" class="w-96 h-auto"></div>
+        <div class="fade-in error-message">Oops! This is not the page you were looking for...</div>
+        <a href="/" class="error-redirect fade-in mt-8 text-violet-500 font-bold hover:transform">Back to homepage</a>
+    </div>
+
+    <script>
+        function redirectTo(section) {
+            window.location.href = "/index.html#" + section;
+        }
+
+        function handleLinkClick(section) {
+            redirectTo(section);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+html{
+    zoom: 90%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+header{
+    z-index: 3;
+    background: linear-gradient(to bottom, #c2afee, rgba(134, 217, 236, 0.442));
+    opacity: 85%;
+    }
+    .logo-container{
+        display: flex;
+        align-items: center;
+        }
+        .devLogo{
+            margin-left: 9vh;
+            cursor: pointer;
+        }
+        .logo-text{
+            margin-left: 1rem;
+            cursor: pointer;
+        }
+
+        .burger-menu {
+            display: contents;
+            position: absolute;
+            top: 60px;
+            right: 10px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            border-radius: 8px;
+            }
+            .burger-menu.active {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .burger-menu ul {
+                flex-direction: row;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+                .burger-menu li{
+                    display: inline-block;
+                    text-align: center;
+                    width: 90px;
+                }
+                .burger-menu li:last-child{
+                    margin-right: 6.25vh;
+                }
+                    .burger-menu a{
+                        position: relative;
+                    }
+                    .burger-menu a:hover::after {
+                        transform: scaleY(1);
+                    }
+                    .burger-menu a:hover{
+                        font-weight: 500;
+                        color: #6b46c1;
+                        transition: transform 0.3s;
+                    }
+                    .burger-menu a::after {
+                        content: '';
+                        display: block;
+                        width: 6px;
+                        height: 6px;
+                        border-radius: 100%;
+                        background-color: #8a2be2;
+                        position: absolute;
+                        bottom: -10px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        transform: scaleY(0);
+                        transition: transform 0.3s ease;
+                    }
+    
+        .burger-button {
+            display: none;
+            cursor: pointer;
+        }
+        .burger-button__line {
+            width: 25px;
+            height: 3px;
+            background-color: #333;
+            margin: 5px 0;
+        }
+
+body {
+    background-color: #f3f4f6;
+}
+
+#app {
+    font-family: Arial, sans-serif;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+body {
+    background-color: #fff;
+}
+
+.error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 112vh;
+}
+
+.error-message {
+    font-size: 2rem;
+    color: #666;
+    margin-top: 1rem;
+}
+
+.error-redirect{
+    font-size: 1.2rem;
+    transform: scale(0.9);
+    transition: 0.3s;
+}

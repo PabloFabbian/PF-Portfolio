@@ -145,13 +145,13 @@ document.addEventListener('keydown', (e) => {
 
 // Datos para Tech Stack ------------------------------------------------------------
 const techStackData = [
-  { name: "HTML5", imgSrc: "media/Html5.png" },
-  { name: "CSS3", imgSrc: "media/Css3.png" },
-  { name: "Javascript", imgSrc: "media/Javascript.png" },
-  { name: "React Js", imgSrc: "media/React.png" },
-  { name: "Git", imgSrc: "media/Git.png" },
-  { name: "Bootstrap", imgSrc: "media/Bootstrap.png" },
-  { name: "Tailwind", imgSrc: "media/Tailwind.png" }
+  { name: "HTML5", imgSrc: "media/Techstack/Html5.png" },
+  { name: "CSS3", imgSrc: "media/Techstack/Css3.png" },
+  { name: "Javascript", imgSrc: "media/Techstack/Javascript.png" },
+  { name: "React Js", imgSrc: "media/Techstack/React.png" },
+  { name: "Git", imgSrc: "media/Techstack/Git.png" },
+  { name: "Bootstrap", imgSrc: "media/Techstack/Bootstrap.png" },
+  { name: "Tailwind", imgSrc: "media/Techstack/Tailwind.png" }
 ];
 
 // Función para crear la lista de Tech Stack
@@ -173,10 +173,10 @@ createTechStackList();
 
 //Datos para Proyectos ------------------------------------------------------------
 const proyectos = [
-  { nombre: "Redline Project", descripcion: "A refined local e-commerce platform that aims to guarantee the most efficient experience in PC components and assembly for its users.", imgSrc: "media/RedlineProject.jpeg", repoLink: "https://github.com/PabloFabbian/Red_Line_Project" },
-  { nombre: "Kuta Coffee ", descripcion: "An e-commerce in principle, which also allows customers to place orders from the store table, providing a more comfortable and efficient experience.", imgSrc: "media/KutaCoffee.jpeg", repoLink: "https://github.com/PabloFabbian/Kuta_Coffee" },
-  { nombre: "Game Development", descripcion: "A retro-style pixel platformer on this web platform. Navigate through nostalgic gaming experiences. No frills, just pure exploration and enjoyment.", imgSrc: "media/Game.gif", repoLink: "#" },
-  { nombre: "Spotify App Re-Design", descripcion: "The classic Spotify application, innovating with new features to enhance the experience for the clientele, improving their interaction with the app.", imgSrc: "media/SpotifyClone.jpeg", repoLink: "#" }
+  { nombre: "Redline Project", descripcion: "A refined local e-commerce platform that aims to guarantee the most efficient experience in PC components and assembly for its users.", imgSrc: "media/Projects/RedlineProject.jpeg", repoLink: "https://github.com/PabloFabbian/Red_Line_Project" },
+  { nombre: "Kuta Coffee ", descripcion: "An e-commerce in principle, which also allows customers to place orders from the store table, providing a more comfortable and efficient experience.", imgSrc: "media/Projects/KutaCoffee.jpeg", repoLink: "https://github.com/PabloFabbian/Kuta_Coffee" },
+  { nombre: "Game Development", descripcion: "A retro-style pixel platformer on this web platform. Navigate through nostalgic gaming experiences. No frills, just pure exploration and enjoyment.", imgSrc: "media/Projects/Game.gif", repoLink: "#404.html" },
+  { nombre: "Spotify App Re-Design", descripcion: "The classic Spotify application, innovating with new features to enhance the experience for the clientele, improving their interaction with the app.", imgSrc: "media/Projects/SpotifyClone.jpeg", repoLink: "#404.html" }
 ];
 
 // Función para crear una card
@@ -203,8 +203,16 @@ function crearCard(proyecto) {
 
   // Al hacer clic en la flechita, abrir el enlace del repositorio
   flechita.addEventListener('click', function () {
-      window.open(proyecto.repoLink, '_blank');
-  });
+    // Verificar si el enlace del repositorio es válido
+    if (proyecto.repoLink !== "#404.html") {
+        // Abrir el enlace del repositorio en una nueva pestaña
+        window.open(proyecto.repoLink, '_blank');
+    } else {
+        // Redirigir al usuario a la página de error 404
+        window.location.href = "404.html";
+    }
+});
+
 
   // Mostrar la flechita al hacer hover
   contenedor.addEventListener('mouseenter', function () {
