@@ -161,7 +161,7 @@ main{
 
 /*----------------- --------------- About Me --------------- -----------------*/
 aside{
-    scroll-margin-top: 160px;
+    scroll-margin-top: 130px;
     opacity: 85%;
 }
 
@@ -261,6 +261,10 @@ aside{
     justify-content: space-between;
     align-items: center;
     opacity: 85%;
+}
+
+#skills{
+    scroll-margin-top: 220px;
 }
 
 #techStack h4{
@@ -741,6 +745,20 @@ aside{
             margin-right: 0%;
         }
 
+    .carousel img{
+        height: auto;
+        width: 40vh;
+    }
+    .carousel-btn-container {
+        rotate: 90deg;
+        }
+        .carousel-btn.left{
+            margin-left: -375px;
+        }
+        .carousel-btn.right{
+            margin-right: -375px;
+        }
+
     /*Educational*/
     .AboutmeContainer2 {
         width: 96%;
@@ -802,6 +820,10 @@ aside{
         margin: 0 auto;
     }
 
+    #projects{
+        padding-bottom: 4vh;
+    }
+
     /*----------------- -------------- Contact Me -------------- -----------------*/
     .contact-form h2{
         margin-top: 0px;
@@ -814,12 +836,11 @@ aside{
         flex-direction: column;
         align-items: center;
         margin-top: 0;
-        padding-bottom: 106vh !important;
     }
         /*Hey There!*/
         .HEY{
-            width: 75%;
-            margin-top: 15%;
+            width: 80% !important;
+            margin-top: 7.5%;
             margin-left: 0%;
             text-align: center;
             }
@@ -829,7 +850,7 @@ aside{
             }
             .HEY h1{
                 margin-bottom: 1%;
-                white-space: nowrap !important;
+                white-space: nowrap;
             }
             .invitationText{
                 width: 100%;
@@ -846,8 +867,8 @@ aside{
                 height: auto;
             }
             .contact-form h2{
-                margin-bottom: 8%;
-                margin-top: 6%;
+                margin-bottom: 0%;
+                transform: scale(1.5);
             }
 
     /*----------------- ---------------- Footer ---------------- -----------------*/
