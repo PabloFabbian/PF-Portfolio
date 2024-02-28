@@ -1,4 +1,4 @@
-html{
+html {
     zoom: 90%;
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -17,92 +17,92 @@ body::-webkit-scrollbar-track {
 }
 
 /*----------------- ----------------- Header ----------------- -----------------*/
-header{
+header {
     z-index: 3;
     background: linear-gradient(to bottom, #c2afee, rgba(134, 217, 236, 0.442));
     opacity: 85%;
-    }
-    .logo-container{
-        display: flex;
-        align-items: center;
-        }
-        .devLogo{
-            margin-left: 9vh;
-            cursor: pointer;
-        }
-        .logo-text{
-            margin-left: 1rem;
-            cursor: pointer;
-        }
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+.devLogo {
+    margin-left: 9vh;
+    cursor: pointer;
+}
+.logo-text {
+    margin-left: 1rem;
+    cursor: pointer;
+}
 
-    .burger-menu {
-        display: contents;
-        position: absolute;
-        top: 60px;
-        right: 10px;
-        background-color: #fff;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        padding: 10px;
-        border-radius: 8px;
-        }
-        .burger-menu.active {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .burger-menu ul {
-            flex-direction: row;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-            .burger-menu li{
-                display: inline-block;
-                text-align: center;
-                width: 90px;
-            }
-            .burger-menu li:last-child{
-                margin-right: 6.25vh;
-            }
-                .burger-menu a{
-                    position: relative;
-                }
-                .burger-menu a:hover::after {
-                    transform: scaleY(1);
-                }
-                .burger-menu a:hover{
-                    font-weight: 500;
-                    color: #6b46c1;
-                    transition: transform 0.3s;
-                }
-                .burger-menu a::after {
-                    content: '';
-                    display: block;
-                    width: 6px;
-                    height: 6px;
-                    border-radius: 100%;
-                    background-color: #8a2be2;
-                    position: absolute;
-                    bottom: -10px;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    transform: scaleY(0);
-                    transition: transform 0.3s ease;
-                }
+.burger-menu {
+    display: contents;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 8px;
+}
+.burger-menu.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.burger-menu ul {
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.burger-menu li {
+    display: inline-block;
+    text-align: center;
+    width: 90px;
+}
+.burger-menu li:last-child {
+    margin-right: 6.25vh;
+}
+.burger-menu a {
+    position: relative;
+}
+.burger-menu a:hover::after {
+    transform: scaleY(1);
+}
+.burger-menu a:hover {
+    font-weight: 500;
+    color: #6b46c1;
+    transition: transform 0.3s;
+}
+.burger-menu a::after {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    background-color: #8a2be2;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+}
 
-    .burger-button {
-        display: none;
-        cursor: pointer;
-    }
-    .burger-button__line {
-        width: 25px;
-        height: 3px;
-        background-color: #333;
-        margin: 5px 0;
-    }
+.burger-button {
+    display: none;
+    cursor: pointer;
+}
+.burger-button__line {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+}
 
 /*----------------- ----------------- Home ----------------- -----------------*/
-main{
+main {
     margin-top: 9vh;
     padding-top: 20vh;
     padding-bottom: 20vh;
@@ -110,44 +110,45 @@ main{
     scroll-margin-top: 58px;
 }
 
-.presentacion{
+.presentacion {
     margin-top: 8vh;
     cursor: default;
 }
 
-.name{
+.name {
     z-index: 2;
     cursor: default;
 }
 
-.text-left{
+.text-left {
     margin-left: 12vh;
 }
 
-.logotipo{
+.logotipo {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.Brush1{
+.Brush1 {
     position: absolute;
     transform: rotate(185deg);
     z-index: 1;
     top: -10px;
-    left: -50px
+    left: -50px;
 }
 
-.Brush2{
+.Brush2 {
     position: absolute;
     transform: rotate(195deg);
     z-index: 1;
     top: 570px;
-    left: 420px
+    left: 420px;
 }
 
 @keyframes float {
-    0%, 100% {
+    0%,
+    100% {
         transform: translateY(-5px);
     }
     60% {
@@ -160,12 +161,12 @@ main{
 }
 
 /*----------------- --------------- About Me --------------- -----------------*/
-aside{
+aside {
     scroll-margin-top: 130px;
     opacity: 85%;
 }
 
-.AboutmeContainer1{
+.AboutmeContainer1 {
     position: sticky;
     margin-left: 10vh;
     margin-right: 10vh;
@@ -174,7 +175,7 @@ aside{
     background: linear-gradient(to bottom, #5e60ce63, #00b4d855);
 }
 
-#profile-photo{
+#profile-photo {
     margin-left: 2.5vh;
     margin-top: 0.5vh;
 }
@@ -226,7 +227,7 @@ aside{
     font-size: 24px;
     color: white;
     cursor: pointer;
-    background: rgba(0, 0, 0, 0.20);
+    background: rgba(0, 0, 0, 0.2);
     padding: 22vh 6vh 25vh 6vh;
     border: none;
     outline: none;
@@ -263,11 +264,11 @@ aside{
     opacity: 85%;
 }
 
-#skills{
+#skills {
     scroll-margin-top: 220px;
 }
 
-#techStack h4{
+#techStack h4 {
     text-align: center;
     margin-bottom: 20px;
     display: flex;
@@ -275,7 +276,7 @@ aside{
 }
 
 /*----------------- -------------- My Projects -------------- -----------------*/
-    section{
+section {
     scroll-margin-top: 97px;
 }
 
@@ -313,7 +314,7 @@ aside{
 }
 
 .flechita:hover:after {
-    content: 'Github Repo';
+    content: "Github Repo";
     position: absolute;
     top: 125%;
     left: -110%;
@@ -340,28 +341,28 @@ aside{
 }
 
 /*----------------- -------------- Contact Me -------------- -----------------*/
-    #contact{
+#contact {
     scroll-margin-top: 90px;
-    background: linear-gradient(to left, #6930c3, #72efdd );
+    background: linear-gradient(to left, #6930c3, #72efdd);
 }
 
 .jump-animation {
     opacity: 0;
     transform: translateY(0);
     transition: opacity 1s ease-out, transform 1s ease-out;
-    }
-    .jump-animation.animate {
-        opacity: 1;
-        transform: translateY(-20px);
-    }
+}
+.jump-animation.animate {
+    opacity: 1;
+    transform: translateY(-20px);
+}
 
-.invitationText{
+.invitationText {
     text-wrap: pretty;
     margin-right: 3rem;
 }
 
-.contactMeForm{
-    font-family: 'Arial', sans-serif;
+.contactMeForm {
+    font-family: "Arial", sans-serif;
 }
 
 .contact-form {
@@ -384,11 +385,11 @@ aside{
     margin-bottom: 15px;
     width: 100%;
     transition: border-color 0.3s;
-    }
-    .form-input:focus {
-        outline: 2.5px solid;
-        outline-color: #6d4acf;
-    }
+}
+.form-input:focus {
+    outline: 2.5px solid;
+    outline-color: #6d4acf;
+}
 
 .form-button {
     color: #ffffff;
@@ -398,24 +399,24 @@ aside{
     transition: background-color 0.4s;
 }
 .form-button:hover {
-        background-color: #3760dd;
-        border-color: #340a35;
-    }
+    background-color: #3760dd;
+    border-color: #340a35;
+}
 
-    /*----------------- ---------------- Footer ---------------- -----------------*/
-    footer{
+/*----------------- ---------------- Footer ---------------- -----------------*/
+footer {
     padding-top: 55vh;
     padding-bottom: 55vh;
-    background-color: #2C2C2C;
+    background-color: #2c2c2c;
 }
-.fa-twitter{
+.fa-twitter {
     padding-left: 1.5px;
 }
-.fa-instagram{
-    font-size:180%;
+.fa-instagram {
+    font-size: 180%;
     padding-bottom: 0.5px;
 }
-.fa-whatsapp{
+.fa-whatsapp {
     font-size: 165%;
     padding-bottom: 1.5px;
     padding-left: 1px;
@@ -423,115 +424,113 @@ aside{
 
 /*----------------- ----------------- Mobile Section ----------------- -----------------*/
 
-
-
 @media only screen and (max-width: 992px) {
     /*----------------- ----------------- Home ----------------- -----------------*/
-    .Brush1{
+    .Brush1 {
         top: -20px;
         left: -150px;
         height: 20%;
     }
-    .Brush2{
+    .Brush2 {
         left: 340px;
         top: 500px;
     }
-    .presentacion{
+    .presentacion {
         margin-top: 20px;
     }
-        .sitting-dev{
-            height: auto;
-            width: 80%;
-        }
-    .py-7{
+    .sitting-dev {
+        height: auto;
+        width: 80%;
+    }
+    .py-7 {
         padding-top: 1rem;
         margin-bottom: 2rem;
         margin-top: 1.5rem;
     }
 
     /*----------------- --------------- About Me --------------- -----------------*/
-    #profile-photo{
+    #profile-photo {
         margin-top: 1.2rem;
     }
 
     /*Educational*/
-    .AboutmeContainer2{
+    .AboutmeContainer2 {
         flex: auto;
         flex-wrap: wrap;
         align-items: flex-start;
         margin-inline: 15vh;
     }
 
-        /*Tech Stack*/
-        #techStack{
-            order: 1;
-            flex-wrap: wrap;
-            align-items: center;
-            padding-top: 5%;
-            width: 90%;
-            }
-            #techStack h4{
-                width: 100%;
-                display: block;
-                margin-bottom: 5%;
-                transform: scale(1.1);
-                }
-            .techStack-content{
-                display: flex;
-                flex-wrap: wrap;
-                }
-            .techItem {
-                margin-bottom: 25px;
-                margin-inline: 2px;
-                }
-                .techItem img{
-                    margin-bottom: 10px;
-                    margin-inline: 10px;
-                }
+    /*Tech Stack*/
+    #techStack {
+        order: 1;
+        flex-wrap: wrap;
+        align-items: center;
+        padding-top: 5%;
+        width: 90%;
+    }
+    #techStack h4 {
+        width: 100%;
+        display: block;
+        margin-bottom: 5%;
+        transform: scale(1.1);
+    }
+    .techStack-content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .techItem {
+        margin-bottom: 25px;
+        margin-inline: 2px;
+    }
+    .techItem img {
+        margin-bottom: 10px;
+        margin-inline: 10px;
+    }
 
-        /*Studies*/
-        #studies{
-            order: 2;
-            width: 100%;
-            text-align: center;
-            padding-top: 0%;
-            }
-            #studies h4{
-                transform: scale(1.1);
-                margin-right: 1rem;
-            }
-            #studies ul{
-                margin-left: 0;
-                display: flex;
-                text-align: center;
-                justify-content: space-evenly;
-                align-items: center;
-            }
+    /*Studies*/
+    #studies {
+        order: 2;
+        width: 100%;
+        text-align: center;
+        padding-top: 0%;
+    }
+    #studies h4 {
+        transform: scale(1.1);
+        margin-right: 1rem;
+    }
+    #studies ul {
+        margin-left: 0;
+        display: flex;
+        text-align: center;
+        justify-content: space-evenly;
+        align-items: center;
+    }
 
     /*----------------- -------------- My Projects -------------- -----------------*/
-    section{
+    section {
         max-width: fit-content;
     }
-    .contenedorProyecto{
+    .contenedorProyecto {
         height: 200px;
     }
-    .contenedorProyecto img{
+    .contenedorProyecto img {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
-    #proyectosContainer{
+    #proyectosContainer {
         grid-template-columns: repeat(2, 1fr);
         row-gap: 12px;
         column-gap: 16px;
     }
-    .nombreProyecto{
+    .nombreProyecto {
         margin-top: 15px;
     }
     .proyectoDescripcion {
         margin-top: 50px;
     }
-    .card{
+    .card {
         width: 100%;
     }
     .contenedorProyecto {
@@ -559,38 +558,38 @@ aside{
     }
 
     /*----------------- -------------- Contact Me -------------- -----------------*/
-    #contact{
+    #contact {
         margin-top: 0rem;
         height: fit-content;
         margin-top: 6vh;
     }
-        #contact h1, #contact h2, #contact p{
-            transform: scale(0.8);
-            margin-left: 0%;
-        }
-        .contactMeForm div{
-            height: fit-content !important;
-        }
-    .contact-form{
+    #contact h1,
+    #contact h2,
+    #contact p {
+        transform: scale(0.8);
+        margin-left: 0%;
+    }
+    .contactMeForm div {
+        height: fit-content !important;
+    }
+    .contact-form {
         padding: 0%;
         margin-bottom: 6vh;
         margin-top: 10vh;
     }
-        .contact-form h2{
-            margin-bottom: -7.5%;
-        }
-        #contactForm{
-            transform: scale(0.8);
-        }
-        #contactForm button{
-            margin-bottom: 0%;
-        }
+    .contact-form h2 {
+        margin-bottom: -7.5%;
+    }
+    #contactForm {
+        transform: scale(0.8);
+    }
+    #contactForm button {
+        margin-bottom: 0%;
+    }
 }
 
-
-
 @media screen and (max-width: 500px) {
-    html{
+    html {
         overflow-x: auto;
         overflow-y: auto;
     }
@@ -599,17 +598,17 @@ aside{
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;
         opacity: 90%;
-        }
-        .devLogo {
-            margin-left: 0%;
-        }
-        .devLogo p{
-            white-space: none;
-        }
+    }
+    .devLogo {
+        margin-left: 0%;
+    }
+    .devLogo p {
+        white-space: none;
+    }
 
     /*Burger Button*/
     .burger-button {
-        display:block;
+        display: block;
     }
     .burger-button__line {
         width: 25px;
@@ -640,124 +639,124 @@ aside{
         height: 30vh;
         width: 65vw;
     }
-    
+
     .burger-menu ul {
         flex-direction: column;
         list-style: none;
         padding: 0;
         margin: 0;
-        }
-        .burger-menu li{
-            display: inline-block;
-            text-align: center;
-            line-height: 3.5vh;
-            border-bottom: 2px groove #702dbd71;
-            padding-inline: 80px;
-            border-radius: 1%;
-            padding-bottom: 8px;
-            margin-bottom: 8px;
-            width: 100%;
-        }
-        .burger-menu li:last-child{
-            margin-right: 0vh;
-            border-bottom: 0px;
-        }
-        .burger-menu li a{
-            width: 100%;
-            color: #333333;
-            text-shadow: 0 1px 2px #8fa5fb;
-            padding-bottom: 10px;
-            box-sizing: border-box;
-            font-weight: 500;
-        }
-        .burger-menu a::after {
-            content: '';
-            display: block;
-            width: 6px;
-            height: 6px;
-            border-radius: 100%;
-            background-color: #8a2be2;
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            transform: scaleY(0);
-            transition: transform 0.3s ease;
-        }
-    
+    }
+    .burger-menu li {
+        display: inline-block;
+        text-align: center;
+        line-height: 3.5vh;
+        border-bottom: 2px groove #702dbd71;
+        padding-inline: 80px;
+        border-radius: 1%;
+        padding-bottom: 8px;
+        margin-bottom: 8px;
+        width: 100%;
+    }
+    .burger-menu li:last-child {
+        margin-right: 0vh;
+        border-bottom: 0px;
+    }
+    .burger-menu li a {
+        width: 100%;
+        color: #333333;
+        text-shadow: 0 1px 2px #8fa5fb;
+        padding-bottom: 10px;
+        box-sizing: border-box;
+        font-weight: 500;
+    }
+    .burger-menu a::after {
+        content: "";
+        display: block;
+        width: 6px;
+        height: 6px;
+        border-radius: 100%;
+        background-color: #8a2be2;
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        transform: scaleY(0);
+        transition: transform 0.3s ease;
+    }
+
     .burger-button.active ~ .burger-menu {
         display: flex;
         justify-content: center;
     }
 
     /*----------------- ----------------- Home ----------------- -----------------*/
-    .Brush1{
+    .Brush1 {
         top: -5vh;
         left: -18vh;
         height: 25%;
     }
-    .Brush2{
+    .Brush2 {
         transform: scaleX(-1);
         rotate: 125deg;
         left: -20vh;
         top: 128vh;
     }
-    .mainInnerContainer{
+    .mainInnerContainer {
         flex-direction: column-reverse !important;
     }
 
     /*Gran Imagen*/
-    .logotipo{
+    .logotipo {
         order: 2;
         margin-top: 4vh;
-        }
-        .sitting-dev{
-            height: auto;
-            max-width: 80%;
-        }
-    
+    }
+    .sitting-dev {
+        height: auto;
+        max-width: 80%;
+    }
+
     /*Presentación*/
-    .presentacion{
+    .presentacion {
         margin-left: 0vh;
         order: 1;
         margin-top: 0;
         text-align: center !important;
-        }
-        .social-pills{
-            justify-content: center;
-        }
+    }
+    .social-pills {
+        justify-content: center;
+    }
 
     /*----------------- --------------- About Me --------------- -----------------*/
     #about {
         opacity: 90%;
         margin-inline: 1vh;
         border-radius: 5% !important;
-        }
-        #profile-photo{
-            text-align: center;
-            margin-top: 5%;
-        }
-        .text{
-            margin-left: 10%;
-        }
-        .text p{
-            justify-content: pretty;
-            margin-right: 0%;
-        }
+    }
+    #profile-photo {
+        text-align: center;
+        margin-top: 5%;
+    }
+    .text {
+        margin-left: 10%;
+    }
+    .text p {
+        justify-content: pretty;
+        margin-right: 0%;
+    }
 
-    .carousel img{
+    .carousel img {
         height: auto;
         width: 40vh;
     }
     .carousel-btn-container {
         rotate: 90deg;
-        }
-        .carousel-btn.left{
-            margin-left: -375px;
-        }
-        .carousel-btn.right{
-            margin-right: -375px;
-        }
+    }
+    .carousel-btn.left {
+        margin-left: -375px;
+    }
+    .carousel-btn.right {
+        margin-right: -375px;
+    }
 
     /*Educational*/
     .AboutmeContainer2 {
@@ -768,49 +767,49 @@ aside{
         flex-direction: column;
         padding-right: 0%;
     }
-        /*Tech Stack*/
-        #techStack{
-            order: 1;
-            flex-wrap: wrap;
-            align-items: center;
-            padding-top: 8%;
-            width: 90%;
-            }
-            #techStack h4{
-                width: 100%;
-                display: block;
-                margin-bottom: 25px;
-                }
-            .techStack-content{
-                display: flex;
-                flex-wrap: wrap;
-                }
-            .techItem {
-                margin-bottom: 25px;
-                margin-inline: 2px;
-                }
-                .techItem img{
-                    margin-bottom: 10px;
-                    margin-inline: 10px;
-                }
-        /*Studies*/
-        #studies{
-            order: 2;
-            width: 100%;
-            text-align: center;
-            padding-top: 0%;
-            }
-            #studies h4{
-                margin-right: 1rem;
-            }
-            #studies ul{
-                margin-left: 0;
-                display: inline-block;
-                text-align: center;
-            }
+    /*Tech Stack*/
+    #techStack {
+        order: 1;
+        flex-wrap: wrap;
+        align-items: center;
+        padding-top: 8%;
+        width: 90%;
+    }
+    #techStack h4 {
+        width: 100%;
+        display: block;
+        margin-bottom: 25px;
+    }
+    .techStack-content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .techItem {
+        margin-bottom: 25px;
+        margin-inline: 2px;
+    }
+    .techItem img {
+        margin-bottom: 10px;
+        margin-inline: 10px;
+    }
+    /*Studies*/
+    #studies {
+        order: 2;
+        width: 100%;
+        text-align: center;
+        padding-top: 0%;
+    }
+    #studies h4 {
+        margin-right: 1rem;
+    }
+    #studies ul {
+        margin-left: 0;
+        display: inline-block;
+        text-align: center;
+    }
 
     /*----------------- -------------- My Projects -------------- -----------------*/
-    #proyectosContainer{
+    #proyectosContainer {
         column-gap: 10px;
         width: 85%;
         height: 85%;
@@ -820,74 +819,74 @@ aside{
         margin: 0 auto;
     }
 
-    #projects{
+    #projects {
         padding-bottom: 4vh;
     }
 
     /*----------------- -------------- Contact Me -------------- -----------------*/
-    .contact-form h2{
+    .contact-form h2 {
         margin-top: 0px;
     }
-    .form-input{
+    .form-input {
         margin-bottom: 0.5rem;
     }
-    #contact{
+    #contact {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-top: 0;
     }
-        /*Hey There!*/
-        .HEY{
-            width: 80% !important;
-            margin-top: 7.5%;
-            margin-left: 0%;
-            text-align: center;
-            }
-            .HEY h1, .HEY p{
-                text-align: center;
-                margin-left: 0%;
-            }
-            .HEY h1{
-                margin-bottom: 1%;
-                white-space: nowrap;
-            }
-            .invitationText{
-                width: 100%;
-                margin-right: 0rem;
-                margin-bottom: 12%;
-            }
-        /*Form*/
-        .contactMeForm{
-            width: 100% !important;
-            transform: scale(0.85);
-            margin-top: -12%;
-            }
-            .contactMeForm div{
-                height: auto;
-            }
-            .contact-form h2{
-                margin-bottom: 0%;
-                transform: scale(1.5);
-            }
+    /*Hey There!*/
+    .HEY {
+        width: 80% !important;
+        margin-top: 7.5%;
+        margin-left: 0%;
+        text-align: center;
+    }
+    .HEY h1,
+    .HEY p {
+        text-align: center;
+        margin-left: 0%;
+    }
+    .HEY h1 {
+        margin-bottom: 1%;
+        white-space: nowrap;
+    }
+    .invitationText {
+        width: 100%;
+        margin-right: 0rem;
+        margin-bottom: 12%;
+    }
+    /*Form*/
+    .contactMeForm {
+        width: 100% !important;
+        transform: scale(0.85);
+        margin-top: -12%;
+    }
+    .contactMeForm div {
+        height: auto;
+    }
+    .contact-form h2 {
+        margin-bottom: 0%;
+        transform: scale(1.5);
+    }
 
     /*----------------- ---------------- Footer ---------------- -----------------*/
-    footer
-    .social-pills-2{
+    footer .social-pills-2 {
         flex-wrap: wrap;
         justify-content: flex-end;
         margin-left: 10%;
     }
-    .social-pills-2 div{
+    .social-pills-2 div {
         order: 2;
         margin-right: 1%;
         margin-top: 5%;
     }
-    .social-pills-2 a{
+    .social-pills-2 a {
         margin-top: 5%;
         order: 1;
     }
-    footer div p{
+    footer div p {
         margin-top: 2.5%;
     }
 }
