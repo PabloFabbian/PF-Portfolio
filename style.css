@@ -18,7 +18,7 @@ body::-webkit-scrollbar-track {
 
 /*----------------- ----------------- Header ----------------- -----------------*/
 header{
-    z-index: 3;
+    z-index: 6;
     background: linear-gradient(to bottom, #c2afee, rgba(134, 217, 236, 0.442));
     opacity: 85%;
     }
@@ -113,6 +113,7 @@ main{
 .presentacion{
     margin-top: 8vh;
     cursor: default;
+    z-index: 5;
 }
 
 .name{
@@ -141,9 +142,9 @@ main{
 .Brush2{
     position: absolute;
     transform: rotate(195deg);
-    z-index: 1;
-    top: 570px;
-    left: 420px
+    z-index: 0;
+    top: 595px;
+    left: 890px
 }
 
 @keyframes float {
@@ -167,15 +168,22 @@ aside{
 
 .AboutmeContainer1{
     position: sticky;
-    margin-left: 10vh;
-    margin-right: 10vh;
+    margin-inline: 18rem;
+    padding-inline: 3rem;
     margin-bottom: 6vh;
     z-index: 2;
     background: linear-gradient(to bottom, #5e60ce63, #00b4d855);
 }
 
+.text{
+    padding-left: .5rem;
+}
+
+#about p{
+    padding-right: .5rem;
+}
+
 #profile-photo{
-    margin-left: 2.5vh;
     margin-top: 0.5vh;
 }
 
@@ -253,8 +261,7 @@ aside{
 }
 
 .AboutmeContainer2 {
-    margin-left: 24vh;
-    margin-right: 24vh;
+    margin-inline: 19rem;
     padding-right: 18px;
     background: linear-gradient(to bottom, #1dbaea5f, #8ef0b08a);
     display: flex;
@@ -267,15 +274,25 @@ aside{
     scroll-margin-top: 220px;
 }
 
-#techStack h4{
-    text-align: center;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
+#techStack{
+    padding-left: 5rem;
+    flex: auto;
+    flex-wrap: wrap;
+}
+
+    #techStack h4{
+        align-items: center;
+        text-align: center;
+        display: flex;
+        margin: 20px;
+    }
+
+#studies{
+    padding-right: 5rem;
 }
 
 /*----------------- -------------- My Projects -------------- -----------------*/
-    section{
+section{
     scroll-margin-top: 97px;
 }
 
@@ -295,6 +312,10 @@ aside{
     transform: scale(1.1);
     transition: transform 0.2s ease;
     cursor: pointer;
+}
+
+.card p{
+    margin-bottom: 2rem;
 }
 
 .flechita {
@@ -340,7 +361,7 @@ aside{
 }
 
 /*----------------- -------------- Contact Me -------------- -----------------*/
-    #contact{
+#contact{
     scroll-margin-top: 90px;
     background: linear-gradient(to left, #6930c3, #72efdd );
 }
@@ -403,7 +424,7 @@ aside{
     }
 
     /*----------------- ---------------- Footer ---------------- -----------------*/
-    footer{
+footer{
     padding-top: 55vh;
     padding-bottom: 55vh;
     background-color: #2C2C2C;
@@ -422,8 +443,6 @@ aside{
 }
 
 /*----------------- ----------------- Mobile Section ----------------- -----------------*/
-
-
 
 @media only screen and (max-width: 992px) {
     /*----------------- ----------------- Home ----------------- -----------------*/
@@ -450,6 +469,10 @@ aside{
     }
 
     /*----------------- --------------- About Me --------------- -----------------*/
+    #about{
+        margin-inline: 4rem;
+    }
+
     #profile-photo{
         margin-top: 1.2rem;
     }
@@ -458,8 +481,9 @@ aside{
     .AboutmeContainer2{
         flex: auto;
         flex-wrap: wrap;
-        align-items: flex-start;
         margin-inline: 15vh;
+        justify-content: center;
+        align-items: center;
     }
 
         /*Tech Stack*/
@@ -468,12 +492,12 @@ aside{
             flex-wrap: wrap;
             align-items: center;
             padding-top: 5%;
-            width: 90%;
+            padding-inline: 2.5rem;
             }
             #techStack h4{
                 width: 100%;
                 display: block;
-                margin-bottom: 5%;
+                margin-bottom: 6%;
                 transform: scale(1.1);
                 }
             .techStack-content{
@@ -495,6 +519,7 @@ aside{
             width: 100%;
             text-align: center;
             padding-top: 0%;
+            padding-right: 0rem;
             }
             #studies h4{
                 transform: scale(1.1);
@@ -585,11 +610,15 @@ aside{
         #contactForm button{
             margin-bottom: 0%;
         }
+
+    /*----------------- -------------- Footer -------------- -----------------*/
+    .fa-brands{
+        margin-top: 2px;
+    }
 }
 
 
-
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px) {
     html{
         overflow-x: auto;
         overflow-y: auto;
@@ -730,8 +759,8 @@ aside{
     /*----------------- --------------- About Me --------------- -----------------*/
     #about {
         opacity: 90%;
-        margin-inline: 1vh;
-        border-radius: 5% !important;
+        border-radius: 7% !important;
+        margin-inline: 1rem;
         }
         #profile-photo{
             text-align: center;
@@ -761,12 +790,12 @@ aside{
 
     /*Educational*/
     .AboutmeContainer2 {
-        width: 96%;
-        margin-inline: 1vh;
+        margin-inline: 1rem;
+        padding-right: 0%;
         border-radius: 5%;
+        width: 96%;
         flex-wrap: wrap;
         flex-direction: column;
-        padding-right: 0%;
     }
         /*Tech Stack*/
         #techStack{

@@ -159,7 +159,7 @@ function createTechStackList() {
   const techStackContainer = document.getElementById('techStack');
   techStackData.forEach(item => {
     const listItem = document.createElement('div');
-    listItem.className = "flex flex-col items-center text-center techItem";
+    listItem.className = "flex flex-col items-center text-center mx-4 mt-4 techItem";
     listItem.innerHTML = `
       <img src="${item.imgSrc}" alt="${item.name} Logo" class="w-12 h-auto mb-6">
       <span class="text-lg">${item.name}</span>
@@ -176,7 +176,7 @@ const proyectos = [
   { nombre: "Redline Project", descripcion: "A refined local e-commerce platform that aims to guarantee the most efficient experience in PC components and assembly for its users.", imgSrc: "media/Projects/RedlineProject.jpeg", repoLink: "https://github.com/PabloFabbian/Red_Line_Project" },
   { nombre: "Kuta Coffee ", descripcion: "An e-commerce in principle, which also allows customers to place orders from the store table, providing a more comfortable and efficient experience.", imgSrc: "media/Projects/KutaCoffee.jpeg", repoLink: "https://github.com/PabloFabbian/Kuta_Coffee" },
   { nombre: "Game Development", descripcion: "A retro-style pixel platformer on this web platform. Navigate through nostalgic gaming experiences. No frills, just pure exploration and enjoyment.", imgSrc: "media/Projects/Game.gif", repoLink: "#404.html" },
-  { nombre: "Spotify App Re-Design", descripcion: "The classic Spotify application, innovating with new features to enhance the experience for the clientele, improving their interaction with the app.", imgSrc: "media/Projects/SpotifyClone.jpeg", repoLink: "#404.html" }
+  { nombre: "PixelPulse Studio", descripcion: "A modern and innovative design studio, specializing in creating visually stunning graphics that captivate and engage your audience.", imgSrc: "media/Projects/PixelpulseStudio.png", repoLink: "https://github.com/PabloFabbian/PixelPulse-Studio" }
 ];
 
 // Función para crear una card
