@@ -168,8 +168,8 @@ aside{
 
 .AboutmeContainer1{
     position: sticky;
-    margin-inline: 18rem;
-    padding-inline: 3rem;
+    margin-inline: 9rem;
+    padding-inline: 4rem;
     margin-bottom: 6vh;
     z-index: 2;
     background: linear-gradient(to bottom, #5e60ce63, #00b4d855);
@@ -261,7 +261,7 @@ aside{
 }
 
 .AboutmeContainer2 {
-    margin-inline: 19rem;
+    margin-inline: 9rem;
     padding-right: 18px;
     background: linear-gradient(to bottom, #1dbaea5f, #8ef0b08a);
     display: flex;
